@@ -251,7 +251,7 @@ function BarcodeModalPricing({
             className={tw(
               "relative flex flex-1 flex-col items-center rounded-lg p-3 text-center transition-colors",
               selectedInterval === "month"
-                ? "border-2 border-primary-200 bg-primary-25"
+                ? "border-2 border-primary-200 bg-white"
                 : "border border-gray-200"
             )}
           >
@@ -278,7 +278,7 @@ function BarcodeModalPricing({
             className={tw(
               "relative flex flex-1 flex-col items-center rounded-lg p-3 text-center transition-colors",
               selectedInterval === "year"
-                ? "border-2 border-primary-200 bg-primary-25"
+                ? "border-2 border-primary-200 bg-white"
                 : "border border-gray-200"
             )}
           >

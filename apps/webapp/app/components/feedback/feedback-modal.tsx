@@ -89,7 +89,7 @@ function TypeToggle({
             className={tw(
               "flex flex-1 items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors",
               value === option
-                ? "border-primary-400 bg-primary-50 text-primary-700"
+                ? "border-primary-400 bg-white text-primary-700"
                 : "border-gray-200 bg-white text-gray-700 hover:bg-gray-50"
             )}
             aria-pressed={value === option}

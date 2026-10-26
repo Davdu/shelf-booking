@@ -286,7 +286,7 @@ function Option({
       aria-label={`${primary} — ${secondary}`}
       className={tw(
         "flex cursor-pointer items-start gap-2 rounded-md border p-3 text-sm",
-        checked ? "border-primary-500 bg-primary-50/40" : "border-gray-200"
+        checked ? "border-primary-500 bg-white" : "border-gray-200"
       )}
     >
       <input

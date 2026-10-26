@@ -206,7 +206,7 @@ function IntervalCard({
       className={tw(
         "relative flex flex-1 cursor-pointer flex-col items-center rounded-lg p-4 text-center transition-colors",
         isSelected
-          ? "border-2 border-primary-200 bg-primary-25"
+          ? "border-2 border-primary-200 bg-white"
           : "border border-gray-200"
       )}
     >

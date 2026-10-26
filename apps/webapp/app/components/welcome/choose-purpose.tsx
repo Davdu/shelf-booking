@@ -388,7 +388,7 @@ function AddonToggle({
           onClick={onToggle}
           className={tw(
             "relative flex w-full items-start gap-3 rounded border border-transparent p-4 text-left",
-            selected ? "border-primary-400 bg-primary-50" : "border-transparent"
+            selected ? "border-primary-400 bg-white" : "border-transparent"
           )}
         >
           <div
@@ -455,7 +455,7 @@ function AddonBillingCards({
           className={tw(
             "flex flex-1 cursor-pointer flex-col items-center rounded-lg p-4 text-center transition-colors",
             billingInterval === "month"
-              ? "border-2 border-primary-200 bg-primary-25"
+              ? "border-2 border-primary-200 bg-white"
               : "border border-gray-200"
           )}
         >
@@ -482,7 +482,7 @@ function AddonBillingCards({
           className={tw(
             "relative flex flex-1 cursor-pointer flex-col items-center rounded-lg p-4 text-center transition-colors",
             billingInterval === "year"
-              ? "border-2 border-primary-200 bg-primary-25"
+              ? "border-2 border-primary-200 bg-white"
               : "border border-gray-200"
           )}
         >
@@ -549,7 +549,7 @@ function PlanCard({
         onClick={() => onSelect(planKey)}
         className={tw(
           "relative flex size-full flex-col rounded border border-transparent bg-white px-4 py-5 text-left",
-          selected ? "border-primary-400 bg-primary-50" : "border-transparent"
+          selected ? "border-primary-400 bg-white" : "border-transparent"
         )}
       >
         <div className="absolute right-1.5 top-1.5">

@@ -67,7 +67,7 @@ export function QuantityTrackingChoice({
               className={tw(
                 "flex items-start gap-3 rounded border p-3",
                 value === option.value
-                  ? "border-primary-300 bg-primary-25"
+                  ? "border-primary-300 bg-white"
                   : "border-gray-200"
               )}
             >

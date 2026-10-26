@@ -207,13 +207,13 @@ dialog {
 }
 
 .onboarding-checklist .completed {
-  @apply border-2 border-primary-600 bg-primary-50 rounded;
+  @apply border-2 border-primary-600 bg-white rounded;
 }
 .onboarding-checklist .completed p {
-  @apply text-primary-700;
+  @apply text-gray-600;
 }
 .onboarding-checklist .completed h6 {
-  @apply text-primary-800;
+  @apply text-gray-900;
 }
 
 .onboarding-checklist .completed i {

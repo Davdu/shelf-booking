@@ -1666,7 +1666,7 @@ function TrackingMethodCards({
             className={tw(
               "flex items-start gap-3 rounded-lg border p-3 text-left transition-colors",
               isSelected
-                ? "border-primary-500 bg-primary-25"
+                ? "border-primary-500 bg-white"
                 : "border-gray-200 bg-white hover:border-gray-300",
               disabled && "cursor-not-allowed opacity-50"
             )}

@@ -100,7 +100,7 @@ const getTriggerClasses = (
     "font-normal text-gray-500",
     open ? "bg-gray-50" : "",
     activeItems > 0
-      ? "whitespace-nowrap border-primary bg-primary-25 text-primary"
+      ? "whitespace-nowrap border-primary bg-white text-primary"
       : "",
     className
   );
