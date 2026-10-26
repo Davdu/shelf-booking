@@ -51,7 +51,8 @@ and `itu-atrium-cover.jpg`.
 ## Building the image
 
 Every push to the `brainlab` branch runs `.github/workflows/build.yml` and
-publishes (amd64 + arm64):
+publishes an amd64 image (arm64 is disabled for build speed; re-add it in
+`platforms:` if the server is ARM):
 
 - `ghcr.io/davdu/shelf-booking:brainlab-<short sha>`: pinned, use this in Dokploy
 - `ghcr.io/davdu/shelf-booking:brainlab`: always the newest build

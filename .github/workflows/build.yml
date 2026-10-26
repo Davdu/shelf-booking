@@ -82,7 +82,9 @@ jobs:
         with:
           context: .
           file: apps/webapp/Dockerfile.image
-          platforms: linux/amd64,linux/arm64
+          # brAIn lab: amd64 only. arm64 runs the whole build under QEMU emulation
+          # and dominates build time; re-add linux/arm64 if an ARM server is used.
+          platforms: linux/amd64
           push: true
           # Note: provenance fixes unknown/unknown platform to be generated on build
           # https://github.com/orgs/community/discussions/45969#discussioncomment-8170787
