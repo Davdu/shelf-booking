@@ -36,6 +36,7 @@ import { makeShelfError, ShelfError } from "~/utils/error";
 import { isMaxFileSizeError } from "~/utils/form-data-parse-errors.server";
 import { assertIsPost, payload, error, parseData } from "~/utils/http.server";
 import { Logger } from "~/utils/logger";
+import { requireAdmin } from "~/utils/roles.server";
 import { getOrCreateCustomerId } from "~/utils/stripe.server";
 import { assertUserCanCreateMoreOrganizations } from "~/utils/subscription.server";
 
@@ -49,6 +50,8 @@ export async function loader({ context, request }: LoaderFunctionArgs) {
       request,
     });
 
+    /** brAIn lab: only global admins can create workspaces */
+    await requireAdmin(userId);
     await assertUserCanCreateMoreOrganizations(userId);
 
     const header: HeaderData = {
@@ -77,6 +80,8 @@ export async function action({ context, request }: ActionFunctionArgs) {
   try {
     assertIsPost(request);
 
+    /** brAIn lab: only global admins can create workspaces */
+    await requireAdmin(userId);
     await assertUserCanCreateMoreOrganizations(userId);
 
     /** Here we need to clone the request as we need 2 different streams:

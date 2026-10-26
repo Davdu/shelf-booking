@@ -24,6 +24,7 @@ import { appendToMetaTitle } from "~/utils/append-to-meta-title";
 import { ShelfError, makeShelfError } from "~/utils/error";
 import { payload, error } from "~/utils/http.server";
 import { isPersonalOrg } from "~/utils/organization";
+import { isAdmin } from "~/utils/roles.server";
 import { canCreateMoreOrganizations } from "~/utils/subscription.server";
 import { tw } from "~/utils/tw";
 import type { UserNameFields } from "~/utils/user";
@@ -100,11 +101,14 @@ export async function loader({ context, request }: LoaderFunctionArgs) {
       : allOrganizations;
     /** Get the tier limit */
     const tierLimit = await getUserTierLimit(userId);
+    /** brAIn lab: only global admins can create workspaces */
+    const canCreateWorkspaces = await isAdmin(context);
 
     return payload({
       userId,
       tier: user.tier,
       tierLimit,
+      canCreateWorkspaces,
       currentOrganizationId: organizationId,
       canCreateMoreOrganizations: canCreateMoreOrganizations({
         tierLimit: tierLimit,
@@ -130,6 +134,7 @@ export default function WorkspacePage() {
   const {
     items: organizations,
     canCreateMoreOrganizations,
+    canCreateWorkspaces,
     tier,
     tierLimit,
   } = useLoaderData<typeof loader>();
@@ -158,22 +163,24 @@ export default function WorkspacePage() {
         <div className="mb-2.5 flex items-center justify-between bg-white md:rounded md:border md:border-gray-200 md:px-6 md:py-5">
           <h2 className=" text-lg text-gray-900">Workspaces</h2>
 
-          <Button
-            to="new"
-            role="link"
-            aria-label="new workspace"
-            data-test-id="createNewWorkspaceButton"
-            variant="primary"
-            disabled={
-              !canCreateMoreOrganizations
-                ? {
-                    reason: upgradeMessage,
-                  }
-                : false
-            }
-          >
-            New workspace
-          </Button>
+          {canCreateWorkspaces ? (
+            <Button
+              to="new"
+              role="link"
+              aria-label="new workspace"
+              data-test-id="createNewWorkspaceButton"
+              variant="primary"
+              disabled={
+                !canCreateMoreOrganizations
+                  ? {
+                      reason: upgradeMessage,
+                    }
+                  : false
+              }
+            >
+              New workspace
+            </Button>
+          ) : null}
         </div>
         <div className="flex-1 overflow-x-auto rounded border bg-white">
           <Table>
