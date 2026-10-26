@@ -100,7 +100,7 @@ export function LastAuditDateCell({
       <Td>
         <Link
           to="/audits"
-          className="text-sm font-medium text-primary-700 hover:underline"
+          className="text-sm font-medium text-gray-900 hover:underline"
         >
           Unlock audits
         </Link>

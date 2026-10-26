@@ -795,7 +795,7 @@ export function BookingAssetsSidebar({
                   ? () => (
                       <Link
                         to={`/bookings/${booking.id}/overview/scan-assets`}
-                        className="whitespace-nowrap text-[12px] font-medium text-primary-700 hover:text-primary-800 hover:underline"
+                        className="whitespace-nowrap text-[12px] font-medium text-gray-900 hover:text-gray-600 hover:underline"
                       >
                         Scan to assign
                       </Link>

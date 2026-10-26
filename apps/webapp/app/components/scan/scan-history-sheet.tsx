@@ -223,7 +223,7 @@ function ScanHistoryItem({ row }: { row: ScanHistoryRow }) {
         <dd className="text-gray-700">
           {row.coordinates ? (
             <a
-              className="text-primary-700 underline-offset-2 hover:underline"
+              className="text-gray-900 underline-offset-2 hover:underline"
               href={googleMapsSearchUrl(
                 row.coordinates.latitude,
                 row.coordinates.longitude

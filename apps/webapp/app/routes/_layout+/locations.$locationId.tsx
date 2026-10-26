@@ -316,7 +316,7 @@ export default function LocationPage() {
                     href="https://nominatim.openstreetmap.org/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-600 underline"
+                    className="text-gray-900 underline"
                   >
                     OpenStreetMap Nominatim
                   </a>
@@ -356,7 +356,7 @@ function LocationBreadcrumbs({
           <Button
             to={`/locations/${crumb.id}`}
             variant="link"
-            className="h-auto p-0 text-[11px] text-gray-600 hover:text-primary-600"
+            className="h-auto p-0 text-[11px] text-gray-600 hover:text-gray-600"
           >
             {crumb.name}
           </Button>

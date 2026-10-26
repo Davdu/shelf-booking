@@ -58,7 +58,7 @@ export function PreferredBarcodeFormRow({
           automatically use your workspace's{" "}
           <a
             href="/settings/general"
-            className="text-primary-700 underline"
+            className="text-gray-900 underline"
             target="_blank"
             rel="noreferrer"
           >

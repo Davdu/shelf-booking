@@ -126,7 +126,7 @@ const WHITE_LOADER = "[&_.diamond-loader]:text-white";
  * Style mappings for button variants
  */
 const variants: Record<ButtonVariant, string> = {
-  /** brAIn lab: primary buttons are neutral black; the brand red is kept for accents */
+  /** brAIn lab: buttons and text links are neutral black; the brand red is kept for accents */
   primary: tw(
     `border-gray-900 bg-gray-900 text-white focus:ring-2`,
     "disabled:border-gray-300 disabled:bg-gray-300",
@@ -140,17 +140,17 @@ const variants: Record<ButtonVariant, string> = {
     "[&:is(a)]:hover:bg-gray-50"
   ),
   tertiary: tw(
-    `border-b border-primary/10 pb-1 leading-none`,
+    `border-b border-gray-300 pb-1 leading-none`,
     "disabled:text-gray-300"
   ),
   link: tw(
-    `border-none p-0 text-text-sm font-semibold text-primary-700 hover:text-primary-800`
+    `border-none p-0 text-text-sm font-semibold text-gray-900 hover:text-gray-600 hover:underline`
   ),
   "link-gray": tw(
     "text-gray border-none p-0 text-text-sm font-normal underline hover:text-gray-500 "
   ),
   "block-link": tw(
-    "-mt-1 border-none px-2 py-1 text-[14px] font-normal hover:bg-primary-50 hover:text-primary-600"
+    "-mt-1 border-none px-2 py-1 text-[14px] font-normal hover:bg-gray-50 hover:text-gray-900"
   ),
   "block-link-gray": tw(
     "-mt-1 border-none px-2 py-1 text-[14px] font-normal hover:bg-gray-50 hover:text-gray-600"

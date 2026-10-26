@@ -264,7 +264,7 @@ export function AdjustBookingAssetQuantityDialog({
                           to={`/assets/${assetId}/bookings`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-medium text-primary underline"
+                          className="font-medium text-gray-900 underline"
                         >
                           View bookings
                         </Link>

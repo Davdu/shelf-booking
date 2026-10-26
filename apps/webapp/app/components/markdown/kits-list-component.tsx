@@ -87,7 +87,7 @@ export function KitsListComponent({
         variant="link"
         to={`/kits/${data.kits[0].id}`}
         target="_blank"
-        className="h-auto p-0 text-black underline hover:text-primary"
+        className="h-auto p-0 text-black underline hover:text-gray-600"
       >
         {data.kits[0].name}
       </Button>
@@ -100,7 +100,7 @@ export function KitsListComponent({
         <Button
           type="button"
           variant="link"
-          className="h-auto p-0 text-black underline hover:text-primary"
+          className="h-auto p-0 text-black underline hover:text-gray-600"
         >
           {displayText}
         </Button>

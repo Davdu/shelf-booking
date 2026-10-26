@@ -24,7 +24,7 @@ export function RolesHelpLink() {
       href={ROLES_HELP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="mt-1 inline-block text-sm font-semibold text-primary-700 hover:text-primary-800"
+      className="mt-1 inline-block text-sm font-semibold text-gray-900 hover:text-gray-600"
     >
       Learn more about roles
       <span className="sr-only"> (opens in a new tab)</span>

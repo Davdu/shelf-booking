@@ -79,6 +79,30 @@ const BARCODE_LABEL_STYLE: CSSProperties = {
   minHeight: "300px",
 };
 
+/**
+ * brAIn lab: brand-red frame around the QR code. The white padding inside the
+ * frame is the code's quiet zone (3 modules), so scanners still find it.
+ */
+const QR_MODULE_PX: Record<SizeKeys, number> = {
+  cable: 1,
+  small: 2,
+  medium: 4,
+  large: 6,
+};
+const QR_FRAME_COLOR = "#BC0020";
+
+function qrFrameStyle(size?: SizeKeys): CSSProperties {
+  const module = QR_MODULE_PX[size ?? "medium"];
+  return {
+    display: "flex",
+    lineHeight: 0,
+    padding: `${Math.max(3 * module, 4)}px`,
+    border: `${module <= 1 ? 2 : 3}px solid ${QR_FRAME_COLOR}`,
+    borderRadius: "6px",
+    backgroundColor: "white",
+  };
+}
+
 /** Title text at the top of a QR/barcode label — truncated, bold, centered. */
 const LABEL_TITLE_STYLE: CSSProperties = {
   fontSize: "12px",
@@ -464,7 +488,9 @@ export const QrLabel = React.forwardRef<HTMLDivElement, QrLabelProps>(
       <div style={QR_LABEL_STYLE} ref={ref}>
         <div style={LABEL_TITLE_STYLE}>{title}</div>
         <figure className="qr-code flex justify-center">
-          <img src={data?.qr?.src} alt={`${data?.qr?.size}-qr-code.png`} />
+          <div style={qrFrameStyle(data?.qr?.size)}>
+            <img src={data?.qr?.src} alt={`${data?.qr?.size}-qr-code.png`} />
+          </div>
         </figure>
         <div className="w-full text-center text-[12px]">
           <div className="font-semibold">

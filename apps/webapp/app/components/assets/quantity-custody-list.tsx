@@ -421,7 +421,7 @@ function KitCustodyBadge({
       Held via kit{" "}
       <Link
         to={`/kits/${kit.id}`}
-        className="font-medium text-primary-600 underline"
+        className="font-medium text-gray-900 underline"
       >
         {kit.name}
       </Link>

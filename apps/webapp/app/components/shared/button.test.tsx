@@ -34,7 +34,7 @@ describe("Button", () => {
     expect(link).not.toHaveClass("box-shadow-xs");
     expect(link).not.toHaveClass("rounded");
     expect(link).not.toHaveClass("border");
-    expect(link).toHaveClass("text-primary-700");
+    expect(link).toHaveClass("text-gray-900");
     expect(link.className).toMatch(/text-start|items-start|justify-start/);
   });
 });

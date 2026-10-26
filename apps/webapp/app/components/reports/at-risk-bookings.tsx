@@ -203,7 +203,7 @@ function RiskGroup({
           <li className="px-4 py-2 md:px-6">
             <Link
               to="/bookings?status=ONGOING"
-              className="text-xs font-medium text-primary-600 hover:text-primary-700"
+              className="text-xs font-medium text-gray-900 hover:text-gray-600"
             >
               View all {bookings.length} bookings →
             </Link>

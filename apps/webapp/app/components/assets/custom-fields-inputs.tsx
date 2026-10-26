@@ -209,7 +209,7 @@ export default function AssetCustomFields({
         <h2 className="mb-1 text-[18px] font-semibold">Custom Fields</h2>
         <Button
           to="/settings/custom-fields"
-          className="font-medium text-primary-600"
+          className="font-medium text-gray-900"
           target="_blank"
           variant="link"
         >
