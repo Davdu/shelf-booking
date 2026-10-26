@@ -53,7 +53,7 @@ describe("trialEndsSoonEmailText", () => {
     expect(text).toContain(
       "automatically charged at the regular subscription rate"
     );
-    expect(text).toContain("Shelf Team");
+    expect(text).toContain("brAIn lab team");
   });
 
   it("shows upgrade message when hasPaymentMethod is false", () => {
@@ -65,7 +65,7 @@ describe("trialEndsSoonEmailText", () => {
       prefs: HARDCODED_DEFAULT_PREFS,
     });
     expect(text).not.toContain("ACTION REQUIRED");
-    expect(text).toContain("Shelf Team trial");
+    expect(text).toContain("brAIn lab Team trial");
     expect(text).toContain("upgrade to a paid plan");
   });
 
@@ -77,7 +77,7 @@ describe("trialEndsSoonEmailText", () => {
       trialEndDate,
       prefs: HARDCODED_DEFAULT_PREFS,
     });
-    expect(text).toContain("Shelf Plus trial");
+    expect(text).toContain("brAIn lab Plus trial");
   });
 
   it("formats trialEndDate correctly", () => {
@@ -122,7 +122,8 @@ describe("sendTrialEndsSoonEmail", () => {
     expect(mockSendEmail).toHaveBeenCalledWith(
       expect.objectContaining({
         to: "alice@example.com",
-        subject: "Your Shelf Team trial ends in 3 days — auto-charge reminder",
+        subject:
+          "Your brAIn lab Team trial ends in 3 days — auto-charge reminder",
       })
     );
   });
@@ -140,7 +141,7 @@ describe("sendTrialEndsSoonEmail", () => {
     expect(mockSendEmail).toHaveBeenCalledOnce();
     expect(mockSendEmail).toHaveBeenCalledWith(
       expect.objectContaining({
-        subject: "Your Shelf Plus trial is ending soon",
+        subject: "Your brAIn lab Plus trial is ending soon",
       })
     );
   });

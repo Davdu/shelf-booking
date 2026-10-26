@@ -41,7 +41,7 @@ User Dashboard: ${SERVER_URL}/admin-dashboard/${user.id}
 
 Please review the user's subscription status in the Stripe dashboard.
 
-— Shelf System
+— brAIn lab System
 `;
 };
 
@@ -112,7 +112,7 @@ export const unpaidInvoiceUserText = ({
 
   return `${greeting},
 
-We wanted to let you know that we weren't able to process your recent payment for your Shelf subscription.
+We wanted to let you know that we weren't able to process your recent payment for your brAIn lab subscription.
 
 Subscription: ${subscriptionName}
 Amount due: ${amountDue}${dueDate ? `\nDue date: ${dueDate}` : ""}
@@ -123,7 +123,7 @@ Update your payment method: ${SERVER_URL}/account-details/subscription
 
 If you have any questions, feel free to reach out to us at ${SUPPORT_EMAIL}. We're happy to help!
 
-The Shelf Team
+The brAIn lab team
 `;
 };
 
@@ -138,7 +138,9 @@ function UnpaidInvoiceUserEmailTemplate({
   return (
     <Html>
       <Head>
-        <title>Action needed: Payment issue with your Shelf subscription</title>
+        <title>
+          Action needed: Payment issue with your brAIn lab subscription
+        </title>
       </Head>
 
       <Container style={{ padding: "32px 16px", maxWidth: "100%" }}>
@@ -151,7 +153,7 @@ function UnpaidInvoiceUserEmailTemplate({
 
           <Text style={{ ...styles.p }}>
             We wanted to let you know that we weren't able to process your
-            recent payment for your Shelf subscription.
+            recent payment for your brAIn lab subscription.
           </Text>
 
           <Text
@@ -208,7 +210,9 @@ function UnpaidInvoiceUserEmailTemplate({
             {SUPPORT_EMAIL}. We're happy to help!
           </Text>
 
-          <Text style={{ marginTop: "24px", ...styles.p }}>The Shelf Team</Text>
+          <Text style={{ marginTop: "24px", ...styles.p }}>
+            The brAIn lab team
+          </Text>
         </div>
       </Container>
     </Html>

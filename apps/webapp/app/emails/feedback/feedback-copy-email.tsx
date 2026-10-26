@@ -126,9 +126,9 @@ Type: ${TYPE_LABELS[type]}
 Message:
 ${message}
 ${screenshotUrl ? `\nScreenshot: ${screenshotUrl}\n` : ""}
-We appreciate you helping us improve Shelf. If you want to add anything, reply to this email.
+We appreciate you helping us improve brAIn lab. If you want to add anything, reply to this email.
 
-The Shelf Team
+The brAIn lab team
 `;
 
 /** Gray box holding the type, matching the internal feedback email */
@@ -228,11 +228,13 @@ function FeedbackCopyEmailTemplate({
           ) : null}
 
           <Text style={{ marginTop: "24px", ...styles.p }}>
-            We appreciate you helping us improve Shelf. If you want to add
+            We appreciate you helping us improve brAIn lab. If you want to add
             anything, reply to this email.
           </Text>
 
-          <Text style={{ marginTop: "24px", ...styles.p }}>The Shelf Team</Text>
+          <Text style={{ marginTop: "24px", ...styles.p }}>
+            The brAIn lab team
+          </Text>
         </div>
       </Container>
     </Html>

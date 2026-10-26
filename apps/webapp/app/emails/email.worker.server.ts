@@ -105,7 +105,7 @@ export const triggerEmail = async ({
   try {
     // send mail with defined transport object
     await transporter.sendMail({
-      from: from || SMTP_FROM || `"Shelf" <hello@example.com>`, // sender address
+      from: from || SMTP_FROM || `"brAIn lab" <hello@example.com>`, // sender address
       replyTo: replyTo || SUPPORT_EMAIL, // reply to
       to: toHeader, // list of receivers
       subject, // Subject line

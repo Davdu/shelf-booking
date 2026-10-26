@@ -486,9 +486,9 @@ export default function SsoConversionPage() {
       <div>
         <h1 className="text-xl font-semibold">Convert accounts to SSO</h1>
         <p className="text-sm text-gray-600">
-          Enter an email domain to list its Shelf accounts. Converted accounts
-          sign in only via SSO and keep all of their data. Owners of the
-          workspace that uses SSO for the domain can keep password login:
+          Enter an email domain to list its brAIn lab accounts. Converted
+          accounts sign in only via SSO and keep all of their data. Owners of
+          the workspace that uses SSO for the domain can keep password login:
           Convert all skips them, but each one can still be converted on its
           own. Owning any other workspace does not exempt an account. SSO
           accounts can be reverted to standard login when that would let them
@@ -945,7 +945,7 @@ function CandidateRow({
                 </AlertDialogTitle>
                 <AlertDialogDescription>
                   {candidate.ownsSsoWorkspace
-                    ? "This account owns the workspace that uses SSO for this domain and could keep password login. After conversion it can only sign in via SSO, and it is signed out of every session. If the identity provider becomes unavailable, Shelf support can revert it to standard login. The account keeps its data and user id."
+                    ? "This account owns the workspace that uses SSO for this domain and could keep password login. After conversion it can only sign in via SSO, and it is signed out of every session. If the identity provider becomes unavailable, brAIn lab support can revert it to standard login. The account keeps its data and user id."
                     : "This removes the account's password and signs it out of every session. From then on it can only sign in through the domain's SSO provider. The account keeps its data and user id."}
                 </AlertDialogDescription>
               </AlertDialogHeader>

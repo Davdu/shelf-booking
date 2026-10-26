@@ -338,7 +338,7 @@ describe("getInvoiceNotificationData", () => {
       prefs: HARDCODED_DEFAULT_PREFS,
     });
 
-    expect(result.subscriptionName).toBe("Shelf Subscription");
+    expect(result.subscriptionName).toBe("brAIn lab Subscription");
   });
 
   it("should use fallback subscription name when lines data is empty", async () => {
@@ -361,7 +361,7 @@ describe("getInvoiceNotificationData", () => {
       prefs: HARDCODED_DEFAULT_PREFS,
     });
 
-    expect(result.subscriptionName).toBe("Shelf Subscription");
+    expect(result.subscriptionName).toBe("brAIn lab Subscription");
   });
 
   it("should include customer notification data", async () => {

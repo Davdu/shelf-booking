@@ -31,7 +31,7 @@ function renderPicker() {
 /** The trigger button of the picker. */
 const trigger = () =>
   screen.getByRole("button", {
-    name: "Shelf field for column Legacy ID: Skip",
+    name: "brAIn lab field for column Legacy ID: Skip",
   });
 
 describe("TargetSelect", () => {
@@ -41,7 +41,7 @@ describe("TargetSelect", () => {
     await user.click(trigger());
 
     await user.type(
-      screen.getByRole("textbox", { name: "Search Shelf fields" }),
+      screen.getByRole("textbox", { name: "Search brAIn lab fields" }),
       "{ArrowDown}{Enter}"
     );
 
@@ -55,7 +55,9 @@ describe("TargetSelect", () => {
     const user = userEvent.setup();
     const { onChange } = renderPicker();
     await user.click(trigger());
-    const search = screen.getByRole("textbox", { name: "Search Shelf fields" });
+    const search = screen.getByRole("textbox", {
+      name: "Search brAIn lab fields",
+    });
 
     await user.type(search, "{ArrowDown}{ArrowDown}");
     await user.type(search, "Location{Enter}");
@@ -68,13 +70,15 @@ describe("TargetSelect", () => {
     const { onChange } = renderPicker();
     await user.click(trigger());
     await user.type(
-      screen.getByRole("textbox", { name: "Search Shelf fields" }),
+      screen.getByRole("textbox", { name: "Search brAIn lab fields" }),
       "Loc{ArrowDown}"
     );
     await user.keyboard("{Escape}");
 
     await user.click(trigger());
-    const search = screen.getByRole("textbox", { name: "Search Shelf fields" });
+    const search = screen.getByRole("textbox", {
+      name: "Search brAIn lab fields",
+    });
     expect(search).toHaveValue("");
     await user.type(search, "{Enter}");
 

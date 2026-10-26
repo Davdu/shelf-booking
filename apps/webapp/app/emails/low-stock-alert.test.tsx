@@ -103,7 +103,7 @@ describe("low-stock alert email", () => {
       "Open booking",
       "Open asset",
       'Restock and adjust the quantity on the asset, and this alert clears. You get a "back in stock" email once it is above 5 Units again.',
-      "The Shelf Team",
+      "The brAIn lab team",
     ];
     for (const fact of facts) {
       expect(visible).toContain(fact);
@@ -134,7 +134,7 @@ describe("low-stock alert email", () => {
       'This email was sent to sam@clearwater.test because your role in "Clearwater Supply" receives inventory alerts, and everyone with such a role received it. To change when it fires, edit the minimum quantity on the asset.';
     expect(visible).toContain(footer);
     expect(text).toContain(footer);
-    expect(visible).toContain(`© ${new Date().getFullYear()} Shelf.nu`);
+    expect(visible).toContain(`© ${new Date().getFullYear()} brAIn lab`);
   });
 
   it("shows the workspace's custom footer when one is set", async () => {

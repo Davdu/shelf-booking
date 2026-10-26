@@ -83,7 +83,7 @@ ${
 If you have any questions, feel free to reach out to us at ${SUPPORT_EMAIL}. We're happy to help!
 
 Happy auditing,
-The Shelf Team
+The brAIn lab team
 `;
 
 function AuditTrialWelcomeEmailTemplate({
@@ -169,7 +169,7 @@ function AuditTrialWelcomeEmailTemplate({
 
           <Text style={{ marginTop: "24px", ...styles.p }}>
             Happy auditing, <br />
-            The Shelf Team
+            The brAIn lab team
           </Text>
         </div>
       </Container>

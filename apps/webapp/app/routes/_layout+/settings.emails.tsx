@@ -287,7 +287,7 @@ export default function EmailSettingsPage() {
  */
 const EMAIL_PREVIEW_VIEW_BUTTON_STYLE = {
   display: "inline-block",
-  backgroundColor: "#EF6820",
+  backgroundColor: "#BC0020",
   color: "white",
   fontSize: "14px",
   fontWeight: "700",
@@ -324,9 +324,7 @@ function EmailPreview({
       <div className="border-b border-gray-200 bg-gray-100 px-5 py-3 text-[13px] leading-relaxed text-gray-600">
         <p>
           <span className="text-gray-400">From:</span>{" "}
-          <span className="text-gray-700">
-            Shelf &lt;notifications@shelf.nu&gt;
-          </span>
+          <span className="text-gray-700">brAIn lab</span>
         </p>
         <p>
           <span className="text-gray-400">To:</span>{" "}
@@ -335,7 +333,7 @@ function EmailPreview({
         <p>
           <span className="text-gray-400">Subject:</span>{" "}
           <span className="text-gray-700">
-            ✅ Booking reserved (Office Equipment Booking) - shelf.nu
+            ✅ Booking reserved (Office Equipment Booking) - brAIn lab
           </span>
         </p>
       </div>
@@ -370,7 +368,7 @@ function EmailPreview({
             >
               <img
                 src="/static/images/logo-full-color(x2).png"
-                alt="Shelf logo"
+                alt="brAIn lab logo"
                 style={{ height: "32px", width: "auto" }}
               />
             </div>
@@ -466,7 +464,7 @@ function EmailPreview({
                 marginBottom: "32px",
               }}
             >
-              &copy; 2026 Shelf.nu
+              &copy; 2026 brAIn lab
             </p>
           </div>
         </div>

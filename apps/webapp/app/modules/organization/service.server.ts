@@ -1243,7 +1243,7 @@ export async function transferOwnership({
 
     /** Send email to new owner */
     sendEmail({
-      subject: `🎉 You're now the Owner of ${currentOrganization.name} - Shelf`,
+      subject: `🎉 You're now the Owner of ${currentOrganization.name} - brAIn lab`,
       to: newOwnerUserOrg.user.email,
       text: newOwnerEmailText({
         newOwnerName: resolveUserDisplayName(newOwnerUserOrg.user),

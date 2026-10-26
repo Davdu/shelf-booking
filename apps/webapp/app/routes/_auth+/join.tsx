@@ -56,7 +56,7 @@ import { passwordSchema } from "~/utils/zod";
 
 export async function loader({ context, request }: LoaderFunctionArgs) {
   const title = "Create an account";
-  const subHeading = "Start your journey with Shelf";
+  const subHeading = "Start your journey with brAIn lab";
   const { disableSignup } = config;
 
   try {

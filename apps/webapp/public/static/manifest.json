@@ -1,12 +1,12 @@
 {
-  "name": "shelf",
+  "name": "brAIn lab",
   "lang": "en-US",
-  "short_name": "shelf",
-  "description": "Open Source Asset and Equipment tracking software that lets you create QR asset labels, manage and overview your assets across locations.",
+  "short_name": "brAIn lab",
+  "description": "brAIn lab equipment booking and asset tracking at the IT University of Copenhagen.",
   "start_url": "/",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#FFFFFF",
+  "theme_color": "#BC0020",
   "background_color": "#FFFFFF",
   "icons": [
     {

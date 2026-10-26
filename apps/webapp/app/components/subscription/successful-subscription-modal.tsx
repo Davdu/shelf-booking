@@ -117,7 +117,7 @@ function AreYouSureModal({ shouldBlock }: { shouldBlock: boolean }) {
             </span>
             . <br />
             Do you want to create your Team workspace to get full advantage of
-            Shelf?
+            brAIn lab?
           </AlertDialogDescription>
           <WarningBox className="my-4 ">
             <>

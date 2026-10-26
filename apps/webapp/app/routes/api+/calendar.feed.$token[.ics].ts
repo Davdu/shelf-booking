@@ -84,7 +84,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
     );
 
     const ics = buildBookingICalendar(events, {
-      calendarName: `${context.organization.name} · Shelf bookings`,
+      calendarName: `${context.organization.name} · brAIn lab bookings`,
     });
 
     return new Response(ics, {

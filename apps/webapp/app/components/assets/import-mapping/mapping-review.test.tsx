@@ -69,7 +69,7 @@ describe("MappingReview", () => {
     expect(within(rows[0]).getByText("Dell Latitude")).toBeTruthy();
     expect(
       within(rows[0]).getByRole("button", {
-        name: "Shelf field for column Item Name: Title",
+        name: "brAIn lab field for column Item Name: Title",
       })
     ).toBeTruthy();
     expect(within(rows[2]).getByText("Guess, please check")).toBeTruthy();
@@ -120,7 +120,7 @@ describe("MappingReview", () => {
     const { onChange } = renderReview();
     await user.click(
       screen.getByRole("button", {
-        name: "Shelf field for column Legacy ID: Skip",
+        name: "brAIn lab field for column Legacy ID: Skip",
       })
     );
     await user.click(screen.getByRole("option", { name: /^Location/ }));
@@ -135,7 +135,7 @@ describe("MappingReview", () => {
     renderReview();
     await user.click(
       screen.getByRole("button", {
-        name: "Shelf field for column Legacy ID: Skip",
+        name: "brAIn lab field for column Legacy ID: Skip",
       })
     );
     expect(screen.queryByRole("option", { name: /Barcode/ })).toBeNull();
@@ -144,7 +144,7 @@ describe("MappingReview", () => {
   it("says when the file already matches", () => {
     renderReview({ alreadyMatches: true });
     expect(screen.getByRole("status").textContent).toBe(
-      "Your file already matches Shelf's format."
+      "Your file already matches brAIn lab's format."
     );
   });
 });

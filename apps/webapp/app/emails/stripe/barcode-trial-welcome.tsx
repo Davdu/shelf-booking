@@ -78,7 +78,7 @@ ${
 If you have any questions, feel free to reach out to us at ${SUPPORT_EMAIL}. We're happy to help!
 
 Happy labeling,
-The Shelf Team
+The brAIn lab team
 `;
 
 function BarcodeTrialWelcomeEmailTemplate({
@@ -164,7 +164,7 @@ function BarcodeTrialWelcomeEmailTemplate({
 
           <Text style={{ marginTop: "24px", ...styles.p }}>
             Happy labeling, <br />
-            The Shelf Team
+            The brAIn lab team
           </Text>
         </div>
       </Container>

@@ -225,7 +225,7 @@ export function TargetSelect({
         <Button
           type="button"
           variant="secondary"
-          aria-label={`Shelf field for column ${source}: ${describeTarget(
+          aria-label={`brAIn lab field for column ${source}: ${describeTarget(
             value
           )}`}
           aria-describedby={describedBy}
@@ -244,7 +244,7 @@ export function TargetSelect({
           className="z-[999999] mt-2 max-h-[360px] w-[320px] overflow-auto rounded-md border border-gray-200 bg-white shadow-md"
         >
           <input
-            aria-label="Search Shelf fields"
+            aria-label="Search brAIn lab fields"
             aria-controls={listId}
             placeholder="Search fields..."
             className="w-full border-0 border-b border-gray-200 px-4 py-2 text-[14px] focus:ring-0"
@@ -254,7 +254,7 @@ export function TargetSelect({
             }
             onKeyDown={handleKeyDown}
           />
-          <div id={listId} role="listbox" aria-label="Shelf fields">
+          <div id={listId} role="listbox" aria-label="brAIn lab fields">
             {visible.map((option, index) => {
               const selected =
                 option.target.kind === value.kind &&

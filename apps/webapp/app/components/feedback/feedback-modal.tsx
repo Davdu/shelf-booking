@@ -471,7 +471,7 @@ export default function FeedbackModal({
                     ? "What were you trying to do when this error happened?"
                     : feedbackType === "issue"
                     ? "Tell us about the issue you're experiencing..."
-                    : "Share your idea for improving Shelf..."
+                    : "Share your idea for improving brAIn lab..."
                 }
                 rows={5}
                 maxLength={5000}

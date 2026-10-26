@@ -49,7 +49,7 @@ async function findSsoCallbackUserByEmail(email: string) {
       status: 409,
       title: "Account needs attention",
       message:
-        "More than one Shelf account uses this email address. Please contact our support team so we can sign you in to the right one.",
+        "More than one brAIn lab account uses this email address. Please contact our support team so we can sign you in to the right one.",
       // The email stays out of the logs: the ids identify the accounts
       // without carrying personal data.
       additionalData: { userIds: matches.map((m) => m.id) },
@@ -138,7 +138,7 @@ function createEmailAccountExistsError() {
     cause: null,
     title: "Account not on single sign-on yet",
     message:
-      "This email already has a Shelf account that has not been moved to single sign-on yet. Ask your Shelf administrator or our support team to convert it: you keep all your data and workspaces, and can then sign in with SSO.",
+      "This email already has a brAIn lab account that has not been moved to single sign-on yet. Ask your brAIn lab administrator or our support team to convert it: you keep all your data and workspaces, and can then sign in with SSO.",
     label: "Auth",
     shouldBeCaptured: false,
   });

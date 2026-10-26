@@ -567,7 +567,7 @@ describe("ContentImportFlow column mapping", () => {
     expect(posts).toEqual([expect.objectContaining({ intent: "analyze" })]);
     expect(
       screen.getByRole("button", {
-        name: "Shelf field for column Item Name: Title",
+        name: "brAIn lab field for column Item Name: Title",
       })
     ).toBeInTheDocument();
   });
@@ -613,7 +613,7 @@ describe("ContentImportFlow column mapping", () => {
 
     await user.click(
       screen.getByRole("button", {
-        name: "Shelf field for column Legacy ID: Skip",
+        name: "brAIn lab field for column Legacy ID: Skip",
       })
     );
     await user.click(screen.getByRole("option", { name: /^Location/ }));
@@ -725,7 +725,7 @@ describe("ContentImportFlow column mapping", () => {
 
     await user.click(
       screen.getByRole("button", {
-        name: "Shelf field for column Legacy ID: Skip",
+        name: "brAIn lab field for column Legacy ID: Skip",
       })
     );
     await user.click(screen.getByRole("option", { name: /^Title/ }));

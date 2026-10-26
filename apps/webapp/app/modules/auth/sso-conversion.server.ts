@@ -394,7 +394,7 @@ export async function convertAccountToSso({
       throw new ShelfError({
         cause: null,
         message:
-          "Another Shelf account uses this email address with different letter case. Resolve the duplicate before converting.",
+          "Another brAIn lab account uses this email address with different letter case. Resolve the duplicate before converting.",
         additionalData: { userId },
         label,
         status: 409,

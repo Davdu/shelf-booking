@@ -74,9 +74,9 @@ export async function loader({ request, context, params }: LoaderFunctionArgs) {
     // RFC 5987 filename* for non-ASCII booking names (e.g. Thai, Chinese)
     const safeFilename = `${booking.name
       .replace(/[^\x20-\x7E]/g, "_")
-      .replace(/["\\]/g, "_")} - shelf.nu.ics`;
+      .replace(/["\\]/g, "_")} - brAIn lab.ics`;
     const encodedFilename = `UTF-8''${encodeURIComponent(
-      `${booking.name} - shelf.nu.ics`
+      `${booking.name} - brAIn lab.ics`
     )}`;
 
     return new Response(ics, {

@@ -70,7 +70,7 @@ export const handle = {
 
 export const links: LinksFunction = () => [
   { rel: "manifest", href: "/static/manifest.json" },
-  { rel: "apple-touch-icon", href: config.faviconPath },
+  { rel: "apple-touch-icon", href: "/static/images/apple-touch-icon.png" },
   { rel: "icon", href: config.faviconPath },
   ...splashScreenLinks,
   { rel: "stylesheet", href: styles },
@@ -83,7 +83,7 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => [
   {
-    title: "shelf.nu",
+    title: "brAIn lab",
   },
 ];
 
@@ -207,15 +207,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        {/* why: iOS Smart App Banner must be rendered here in <head>, not via a
-            route `meta` export. React Router renders the leaf route's meta
-            (not a merge of root + leaf), and 150+ routes export their own
-            meta, so a root-level descriptor would be dropped on the pages
-            users actually visit. Placed in the shared document <head> it is
-            present site-wide. Mobile Safari renders a native banner linking to
-            the Shelf Companion App Store listing (id6765639874), or "Open" if
-            installed. Apple-hosted, zero-maintenance, no CLS, no cookie. */}
-        <meta name="apple-itunes-app" content="app-id=6765639874" />
+        {/* brAIn lab: the iOS Smart App Banner for the Shelf Companion app was removed. */}
         {/* why: a classic inline script runs even in browsers that cannot
             execute the module bundle, so they get the "browser out of date"
             screen below instead of a spinner. The inline style keeps that
@@ -249,7 +241,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <div id={UNSUPPORTED_BROWSER_SCREEN_ID}>
           <BlockInteractions
             title="Your browser is out of date"
-            content="Shelf needs a current browser. Please update your browser, or switch to the latest Chrome, Firefox, Edge or Safari."
+            content="brAIn lab needs a current browser. Please update your browser, or switch to the latest Chrome, Firefox, Edge or Safari."
             icon="x"
           />
         </div>
@@ -259,7 +251,7 @@ export function Layout({ children }: { children: ReactNode }) {
             the watchdog, not React, because React never attached here. */}
         <div id={HYDRATION_FAILED_SCREEN_ID}>
           <BlockInteractions
-            title="Shelf could not finish loading"
+            title="brAIn lab could not finish loading"
             content="Part of the app did not download. This is usually a brief network problem, or a firewall or proxy blocking files from this site. Reloading normally fixes it."
             icon="x"
           >
@@ -323,10 +315,6 @@ function App() {
       content={
         "Apologies, we’re down for scheduled maintenance. Please try again later."
       }
-      cta={{
-        to: "https://www.shelf.nu/blog-categories/updates-maintenance",
-        text: "Learn more",
-      }}
       icon="tool"
     />
   ) : (

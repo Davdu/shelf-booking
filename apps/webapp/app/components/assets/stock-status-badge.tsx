@@ -405,8 +405,8 @@ export function StockStatusBadge({ status, breakdown }: StockStatusBadgeProps) {
                   {breakdown.unitOfMeasure
                     ? ` ${breakdown.unitOfMeasure}`
                     : ""}{" "}
-                  available. Set a min quantity and Shelf will flag this asset
-                  once it drops to that level.
+                  available. Set a min quantity and brAIn lab will flag this
+                  asset once it drops to that level.
                 </p>
                 {breakdown.assetId ? (
                   <Link

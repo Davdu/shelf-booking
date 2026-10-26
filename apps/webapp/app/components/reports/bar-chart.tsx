@@ -29,7 +29,7 @@ import type { ChartSeries } from "~/modules/reports/types";
 
 /** Color palette for multi-series charts */
 const SERIES_COLORS = [
-  "#EF6820", // primary-500 (Shelf orange)
+  "#BC0020", // primary-500 (brAIn lab red)
   "#22c55e", // green-500
   "#3b82f6", // blue-500
   "#a855f7", // purple-500

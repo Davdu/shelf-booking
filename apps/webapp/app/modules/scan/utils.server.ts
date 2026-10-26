@@ -59,7 +59,7 @@ export function parseCompanionUserAgent(
   return {
     ua: userAgent as string,
     browser: {
-      name: `Shelf app ${appVersion}`,
+      name: `Mobile app ${appVersion}`,
       version: appVersion,
       major: undefined,
     },

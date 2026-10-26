@@ -187,7 +187,7 @@ export function ExportAssetsButton() {
         disabled={{
           reason: (
             <>
-              Exporting is not available on the free tier of shelf.{" "}
+              Exporting is not available on the free tier of brAIn lab.{" "}
               <UpgradeMessage />
             </>
           ),

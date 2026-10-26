@@ -291,7 +291,7 @@ export async function loader({ context, request }: LoaderFunctionArgs) {
 
     const title = "Set up your account";
     const subHeading =
-      "You are almost ready to use Shelf. We just need some basic information to get you started.";
+      "You are almost ready to use brAIn lab. We just need some basic information to get you started.";
 
     return data(
       payload({
@@ -619,7 +619,7 @@ export default function Onboarding() {
         <div>
           <Input
             label="Username"
-            addOn="shelf.nu/"
+            addOn="@"
             autoComplete="username"
             required
             type="text"
@@ -711,7 +711,7 @@ export default function Onboarding() {
             <When truthy={!isPersonalUse && requireCompanyName}>
               <Input
                 label="Company/Organization"
-                placeholder="Shelf Inc."
+                placeholder="IT University of Copenhagen"
                 name={zo.fields.companyName()}
                 error={zo.errors.companyName()?.message}
                 defaultValue={companyNameDefault}
@@ -737,7 +737,7 @@ export default function Onboarding() {
                 className="flex w-full items-center justify-between rounded-md border border-gray-200 bg-gray-50 px-4 py-3 text-left font-medium text-gray-700 hover:bg-gray-100"
               >
                 <span>
-                  Help us customize Shelf
+                  Help us customize brAIn lab
                   <span className="ml-1 text-sm font-normal text-gray-500">
                     (optional)
                   </span>

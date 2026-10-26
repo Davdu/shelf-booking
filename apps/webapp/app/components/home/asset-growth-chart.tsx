@@ -49,7 +49,7 @@ export default function AssetGrowthChart() {
                 data={chartData}
                 index="date"
                 categories={["Total assets"]}
-                colors={["orange"]}
+                colors={["primary"]}
                 showAnimation={true}
                 animationDuration={600}
                 curveType="monotone"

@@ -129,8 +129,8 @@ function ImportContentBody({
           variant="link"
           to={
             canUseBarcodes
-              ? "/static/shelf.nu-example-asset-import-from-content-with-barcodes.csv"
-              : "/static/shelf.nu-example-asset-import-from-content.csv"
+              ? "/static/brainlab-example-asset-import-from-content-with-barcodes.csv"
+              : "/static/brainlab-example-asset-import-from-content.csv"
           }
           target="_blank"
           download
@@ -143,7 +143,7 @@ function ImportContentBody({
       <p className="my-4 text-[14px] text-gray-600">
         Already have a spreadsheet from another tool? Upload it as it is. Before
         anything is imported, you will check how each of its columns maps to a
-        Shelf field.
+        brAIn lab field.
       </p>
 
       <div className="my-5 flex flex-col gap-4">
@@ -226,13 +226,14 @@ function ImportContentBody({
           <div>
             <h5 className="font-semibold">QR codes</h5>
             <p className="text-[14px] text-gray-600">
-              You can link a Shelf QR code to each asset. This is useful if you
-              already have QR codes printed and want to connect them to the
+              You can link a brAIn lab QR code to each asset. This is useful if
+              you already have QR codes printed and want to connect them to the
               assets you're importing. Limitations:
             </p>
             <ul className="list-inside list-disc pl-2 text-[14px] text-gray-600">
               <li>
-                <b>Existing code</b> - the QR code must already exist in Shelf
+                <b>Existing code</b> - the QR code must already exist in brAIn
+                lab
               </li>
               <li>
                 <b>No duplicates</b> - each qrId must be unique per asset

@@ -71,7 +71,7 @@ function companionVersionFromEnv(name: string, value: string): string | null {
  */
 export function loader(_args: LoaderFunctionArgs) {
   return data({
-    name: INSTANCE_NAME || "Shelf",
+    name: INSTANCE_NAME || "brAIn lab",
     supabaseUrl: SUPABASE_URL,
     supabaseAnonKey: SUPABASE_ANON_PUBLIC,
     mobileApiVersion: MOBILE_API_VERSION,

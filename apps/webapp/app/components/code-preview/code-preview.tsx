@@ -160,7 +160,7 @@ export const CodePreview = ({
       codes.push({
         id: qrObj.qr.id,
         type: "qr",
-        label: "Shelf QR Code",
+        label: "brAIn lab QR Code",
         qrData: {
           size: qrObj.qr.size,
           src: qrObj.qr.src,
@@ -252,7 +252,7 @@ export const CodePreview = ({
 
     const prefix = `${slugify(item.name || item.type)}`;
     if (selectedCode.type === "qr") {
-      return `${prefix}-${selectedCode.qrData?.size}-shelf-qr-code-${selectedCode.id}.png`;
+      return `${prefix}-${selectedCode.qrData?.size}-qr-code-${selectedCode.id}.png`;
     } else {
       return `${prefix}-${selectedCode.barcodeData?.type}-barcode-${selectedCode.barcodeData?.value}.png`;
     }
@@ -351,7 +351,7 @@ export const CodePreview = ({
                   ? {
                       reason: isOwner ? (
                         <>
-                          Shelf QR codes are included in every plan. Adding
+                          brAIn lab QR codes are included in every plan. Adding
                           other barcodes, like Code128 or a QR code from another
                           system, needs the Alternative Barcodes add-on.{" "}
                           <UnlockBarcodesModal
@@ -361,7 +361,7 @@ export const CodePreview = ({
                         </>
                       ) : (
                         <>
-                          Shelf QR codes are included in every plan. Adding
+                          brAIn lab QR codes are included in every plan. Adding
                           other barcodes needs the Alternative Barcodes add-on:
                           contact your workspace owner to enable it, or get in
                           touch with{" "}
@@ -464,10 +464,7 @@ export const QrLabel = React.forwardRef<HTMLDivElement, QrLabelProps>(
       <div style={QR_LABEL_STYLE} ref={ref}>
         <div style={LABEL_TITLE_STYLE}>{title}</div>
         <figure className="qr-code flex justify-center">
-          <img
-            src={data?.qr?.src}
-            alt={`${data?.qr?.size}-shelf-qr-code.png`}
-          />
+          <img src={data?.qr?.src} alt={`${data?.qr?.size}-qr-code.png`} />
         </figure>
         <div className="w-full text-center text-[12px]">
           <div className="font-semibold">
@@ -477,8 +474,7 @@ export const QrLabel = React.forwardRef<HTMLDivElement, QrLabelProps>(
           </div>
           {showShelfBranding ? (
             <div>
-              Powered by{" "}
-              <span className="font-semibold text-black">shelf.nu</span>
+              <span className="font-semibold text-black">brAIn lab</span>
             </div>
           ) : null}
         </div>
@@ -530,8 +526,7 @@ export const BarcodeLabel = React.forwardRef<HTMLDivElement, BarcodeLabelProps>(
           </div>
           {showShelfBranding ? (
             <div>
-              Powered by{" "}
-              <span className="font-semibold text-black">shelf.nu</span>
+              <span className="font-semibold text-black">brAIn lab</span>
             </div>
           ) : null}
         </div>

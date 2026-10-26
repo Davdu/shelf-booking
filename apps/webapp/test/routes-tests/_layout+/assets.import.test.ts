@@ -595,7 +595,7 @@ describe("assets.import column mapping", () => {
                 : column
             )
           ),
-        "Two columns share one Shelf field",
+        "Two columns share one brAIn lab field",
         "duplicate_targets",
       ],
       [

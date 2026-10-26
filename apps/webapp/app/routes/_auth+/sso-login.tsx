@@ -92,7 +92,7 @@ export async function loader({ context, request }: LoaderFunctionArgs) {
         cause: null,
         title: "Sign-in not supported",
         message:
-          "This version of the Shelf app can't sign in with SSO. Please update the app and try again.",
+          "This version of the brAIn lab app can't sign in with SSO. Please update the app and try again.",
         label: "Auth",
         status: 400,
         shouldBeCaptured: false,

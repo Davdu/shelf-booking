@@ -35,7 +35,7 @@ export function SsoAccountLinkedNotice({
       <p className="mt-1 text-sm text-gray-700">
         {variant === "web"
           ? "One more step: sign in with SSO again to open your account. Your data and workspaces are all there."
-          : "One more step: close this window and sign in with SSO again in the Shelf app. Your data and workspaces are all there."}
+          : "One more step: close this window and sign in with SSO again in the brAIn lab app. Your data and workspaces are all there."}
       </p>
       {variant === "web" ? (
         <Button to="/sso-login" className="mt-4" width="full">

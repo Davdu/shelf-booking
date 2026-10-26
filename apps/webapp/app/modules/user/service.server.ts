@@ -1431,7 +1431,7 @@ export async function updateUserEmail({
         // Unique email constraint is being handled automatically by `getSupabaseAdmin().auth.admin.generateLink`
         throw new ShelfError({
           cause,
-          message: "Failed to update email in shelf",
+          message: "Failed to update email in brAIn lab",
           additionalData: { userId, newEmail, currentEmail },
           label,
         });
@@ -1778,7 +1778,7 @@ export async function softDeleteUser(id: User["id"]) {
     void sendEmail({
       to: user.email,
       subject: "Your account has been deleted",
-      text: `Your shelf account has been deleted. \n\n Kind regards, \n Shelf Team\n\n`,
+      text: `Your brAIn lab account has been deleted. \n\n Kind regards, \n brAIn lab team\n\n`,
     });
 
     if (error) {

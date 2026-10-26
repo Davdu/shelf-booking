@@ -126,7 +126,7 @@ export function buildBookingVEvent(booking: ICalBookingInput): string[] {
     `DTEND:${formatDateForICal(booking.to)}`,
     // Booking-derived (not fetch time) so a subscribed feed is stable per poll.
     `DTSTAMP:${formatDateForICal(booking.updatedAt)}`,
-    "CATEGORIES:Shelf.nu booking",
+    "CATEGORIES:brAIn lab booking",
     `DESCRIPTION:${description}`,
     `URL:${booking.bookingUrl}`,
     "BEGIN:VALARM",
@@ -155,7 +155,7 @@ export function buildBookingICalendar(
   const header = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Shelf.nu//Shelf Calendar 1.0//EN",
+    "PRODID:-//brAIn lab//brAIn lab Calendar 1.0//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
   ];

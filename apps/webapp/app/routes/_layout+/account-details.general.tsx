@@ -50,7 +50,7 @@ import { appendToMetaTitle } from "~/utils/append-to-meta-title";
 import { checkExhaustiveSwitch } from "~/utils/check-exhaustive-switch";
 import { delay } from "~/utils/delay";
 import { sendNotification } from "~/utils/emitter/send-notification.server";
-import { ADMIN_EMAIL, SERVER_URL } from "~/utils/env";
+import { ADMIN_EMAIL, SERVER_URL, SUPPORT_EMAIL } from "~/utils/env";
 import { makeShelfError, ShelfError } from "~/utils/error";
 import { payload, error, parseData } from "~/utils/http.server";
 import {
@@ -304,8 +304,9 @@ export async function action({ context, request }: ActionFunctionArgs) {
          * reviews these requests could be shown an address the account does
          * not own.
          */
+        /** brAIn lab: never fall back to Shelf's own inbox; use SUPPORT_EMAIL instead */
         sendEmail({
-          to: ADMIN_EMAIL || `"Shelf" <updates@emails.shelf.nu>`,
+          to: ADMIN_EMAIL || SUPPORT_EMAIL,
           subject: "Delete account request",
           text: `User with id ${userId} and email ${email} has requested to delete their account. \n User: ${SERVER_URL}/admin-dashboard/${userId} \n\n Reason: ${reason}\n\n`,
         });
@@ -313,7 +314,7 @@ export async function action({ context, request }: ActionFunctionArgs) {
         sendEmail({
           to: email,
           subject: "Delete account request received",
-          text: `We have received your request to delete your account. It will be processed within 72 hours.\n\n Kind regards,\nthe Shelf team \n\n`,
+          text: `We have received your request to delete your account. It will be processed within 72 hours.\n\n Kind regards,\nthe brAIn lab team \n\n`,
         });
 
         sendNotification({
@@ -381,7 +382,7 @@ export async function action({ context, request }: ActionFunctionArgs) {
         // Send email with OTP using our email service
         sendEmail({
           to: newEmail,
-          subject: `🔐 Shelf verification code: ${linkData.properties.email_otp}`,
+          subject: `🔐 brAIn lab verification code: ${linkData.properties.email_otp}`,
           text: changeEmailAddressTextEmail({
             otp: linkData.properties.email_otp,
             user,

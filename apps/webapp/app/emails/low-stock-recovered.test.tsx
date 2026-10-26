@@ -85,7 +85,7 @@ describe("back-in-stock email", () => {
       "See all low-stock items",
       "Open asset",
       "No action needed.",
-      "The Shelf Team",
+      "The brAIn lab team",
     ];
     for (const fact of facts) {
       expect(visible).toContain(fact);

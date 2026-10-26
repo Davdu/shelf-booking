@@ -214,7 +214,7 @@ describe("buildBookingICalendar", () => {
     expect(ics.startsWith("BEGIN:VCALENDAR\r\n")).toBe(true);
     expect(ics.endsWith("END:VCALENDAR")).toBe(true);
     expect(ics).toContain("VERSION:2.0");
-    expect(ics).toContain("PRODID:-//Shelf.nu//Shelf Calendar 1.0//EN");
+    expect(ics).toContain("PRODID:-//brAIn lab//brAIn lab Calendar 1.0//EN");
     expect(ics).toContain("METHOD:PUBLISH");
     expect(ics.split("\r\n")).toContain("BEGIN:VEVENT");
   });

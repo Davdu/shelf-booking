@@ -1028,7 +1028,7 @@ export async function getInvoiceNotificationData({
   });
 
   const subscriptionName =
-    invoice.lines?.data?.[0]?.description || "Shelf Subscription";
+    invoice.lines?.data?.[0]?.description || "brAIn lab Subscription";
   const amountDue = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: invoice.currency,

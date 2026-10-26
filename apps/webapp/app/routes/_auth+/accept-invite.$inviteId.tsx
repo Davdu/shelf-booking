@@ -317,8 +317,8 @@ export default function AcceptInvite() {
           <div>
             <h2>Accept invite</h2>
             <p className="mt-2">
-              <strong>{inviter}</strong> invites you to join Shelf as a member
-              of <strong>{workspace}’s</strong> workspace.
+              <strong>{inviter}</strong> invites you to join brAIn lab as a
+              member of <strong>{workspace}’s</strong> workspace.
             </p>
             <Form method="post" className="my-3">
               <input

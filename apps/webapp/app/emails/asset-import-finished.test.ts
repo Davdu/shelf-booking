@@ -49,7 +49,7 @@ describe("assetImportFinishedEmailText", () => {
     expect(text).toContain("Started by: Sam Lee");
     expect(text).toContain(`View assets: ${SERVER_URL}/assets`);
     expect(text).toContain(FOOTER_REASON);
-    expect(text).toContain("The Shelf Team");
+    expect(text).toContain("The brAIn lab team");
     expect(text).not.toContain("Rows with warnings");
     expect(text).not.toContain("View import:");
     expect(text).not.toMatch(/[—–]/);

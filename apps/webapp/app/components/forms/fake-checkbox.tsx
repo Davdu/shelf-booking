@@ -7,7 +7,7 @@ type FakeCheckboxProps = SVGProps<SVGSVGElement> & {
 
 export const FakeCheckbox = ({
   checked,
-  fillColor = "#FEF6EE",
+  fillColor = "#FBF0F2",
   ...svgProps
 }: FakeCheckboxProps) =>
   checked ? (

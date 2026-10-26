@@ -53,7 +53,7 @@ export function buildServiceProviderConfig() {
         type: "oauthbearertoken",
         name: "OAuth Bearer Token",
         description:
-          "Authentication via the long-lived SCIM bearer token issued in the Shelf workspace settings.",
+          "Authentication via the long-lived SCIM bearer token issued in the brAIn lab workspace settings.",
         specUri: "https://www.rfc-editor.org/info/rfc6750",
         documentationUri: SCIM_DOCS_URL,
         primary: true,
@@ -114,7 +114,7 @@ function buildUserSchema() {
         type: "string",
         multiValued: false,
         description:
-          "Unique identifier for the User, used to log in. Maps to the Shelf email.",
+          "Unique identifier for the User, used to log in. Maps to the brAIn lab email.",
         required: true,
         caseExact: false,
         mutability: "readWrite",

@@ -63,7 +63,7 @@ export default function CalendarSubscribeDialog({
           <div className="mb-5">
             <h4>Subscribe to your booking calendar</h4>
             <p className="text-gray-600">
-              Add a live calendar to Google, Apple or Outlook and your Shelf
+              Add a live calendar to Google, Apple or Outlook and your brAIn lab
               bookings appear automatically. Subscribed calendars refresh on
               your calendar app&apos;s own schedule (often a few hours), so
               updates are not instant. Keep this link private — anyone with it

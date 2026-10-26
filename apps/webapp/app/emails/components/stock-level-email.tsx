@@ -221,7 +221,9 @@ export function StockLevelEmail({
             {content.notice}
           </Text>
 
-          <Text style={{ marginTop: "24px", ...styles.p }}>The Shelf Team</Text>
+          <Text style={{ marginTop: "24px", ...styles.p }}>
+            The brAIn lab team
+          </Text>
 
           <Text style={footerStyle}>
             <Segments
@@ -234,7 +236,7 @@ export function StockLevelEmail({
           </Text>
           <CustomEmailFooter footerText={facts.customEmailFooter} />
           <Text style={{ ...footerStyle, marginBottom: "32px" }}>
-            © {new Date().getFullYear()} Shelf.nu
+            © {new Date().getFullYear()} brAIn lab
           </Text>
         </div>
       </Container>
@@ -277,10 +279,10 @@ export function stockLevelEmailText({
     ...(factLines.length > 0 ? [factLines.join("\n")] : []),
     `Open asset: ${facts.serverUrl}/assets/${facts.assetId}/overview`,
     content.notice,
-    "The Shelf Team",
+    "The brAIn lab team",
     footer,
     ...(facts.customEmailFooter ? [`---\n${facts.customEmailFooter}`] : []),
-    `© ${new Date().getFullYear()} Shelf.nu`,
+    `© ${new Date().getFullYear()} brAIn lab`,
   ];
 
   return `${blocks.join("\n\n")}\n`;

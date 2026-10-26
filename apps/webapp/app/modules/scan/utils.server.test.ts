@@ -27,7 +27,7 @@ describe("parseCompanionUserAgent", () => {
       model: "iPhone",
       type: "mobile",
     });
-    expect(result?.browser.name).toBe("Shelf app 1.3.0");
+    expect(result?.browser.name).toBe("Mobile app 1.3.0");
     expect(result?.os).toEqual({ name: "iOS", version: "18.6" });
   });
 
@@ -99,7 +99,7 @@ describe("parseScanData", () => {
       userId: "user-1",
     });
 
-    expect(result?.ua.browser.name).toBe("Shelf app 1.3.0");
+    expect(result?.ua.browser.name).toBe("Mobile app 1.3.0");
     expect(result?.ua.device.vendor).toBe("Apple");
   });
 

@@ -92,8 +92,8 @@ export default function OnboardingChecklist() {
                         Import your assets
                       </h6>
                       <p className=" text-gray-600">
-                        Upload the spreadsheet you use today. Shelf matches its
-                        columns for you to review.
+                        Upload the spreadsheet you use today. brAIn lab matches
+                        its columns for you to review.
                       </p>
                     </div>
                     <div className="flex gap-3">
@@ -209,7 +209,7 @@ export default function OnboardingChecklist() {
                     </h6>
                     <p className=" text-gray-600">
                       Track who has custody over an asset by adding your team
-                      members to shelf.
+                      members to brAIn lab.
                     </p>
                   </div>
                   <div className="flex gap-3">
@@ -274,8 +274,8 @@ export default function OnboardingChecklist() {
         <div className="mb-4">
           <h4 className=" text-lg font-semibold">Customize your experience</h4>
           <p className="text-[14px] text-gray-600">
-            Optimize your workflow and use Shelf in way that works for you and
-            your organizations.
+            Optimize your workflow and use brAIn lab in way that works for you
+            and your organizations.
           </p>
         </div>
         <ul className="onboarding-checklist -mx-1 xl:flex xl:flex-wrap">

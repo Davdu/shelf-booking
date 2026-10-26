@@ -107,18 +107,19 @@ export default {
           900: "#101828",
         },
         primary: {
-          DEFAULT: "#EF6820",
-          25: "#FEFAF5",
-          50: "#FEF6EE",
-          100: "#FDEAD7",
-          200: "#F9DBAF",
-          300: "#F7B27A",
-          400: "#F38744",
-          500: "#EF6820",
-          600: "#EF6820",
-          700: "#EF6820",
-          800: "#932F19",
-          900: "#772917",
+          // brAIn lab red (#BC0020): tints mixed with white, shades with black
+          DEFAULT: "#BC0020",
+          25: "#FDF7F8",
+          50: "#FBF0F2",
+          100: "#F6DEE2",
+          200: "#EEBDC5",
+          300: "#E18C9B",
+          400: "#CF475E",
+          500: "#BC0020",
+          600: "#BC0020",
+          700: "#A5001C",
+          800: "#870017",
+          900: "#690012",
         },
         error: {
           25: "#FFFBFA",
@@ -327,6 +328,12 @@ export default {
     },
   },
   safelist: [
+    // brAIn lab: Tremor charts use the custom "primary" colour
+    {
+      pattern:
+        /^(bg|text|border|ring|stroke|fill)-primary(-(25|50|100|200|300|400|500|600|700|800|900))?$/,
+      variants: ["hover", "ui-selected"],
+    },
     {
       pattern:
         /^(bg-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,

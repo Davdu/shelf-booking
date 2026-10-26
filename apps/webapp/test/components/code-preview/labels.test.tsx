@@ -19,13 +19,13 @@ describe("QrLabel", () => {
     },
   } as const;
 
-  it("shows Shelf branding by default", () => {
+  it("shows brAIn lab branding by default", () => {
     render(<QrLabel {...(baseProps as any)} />);
 
-    expect(screen.getByText(/Powered by/i)).toBeInTheDocument();
+    expect(screen.getByText("brAIn lab")).toBeInTheDocument();
   });
 
-  it("hides Shelf branding when requested", () => {
+  it("hides brAIn lab branding when requested", () => {
     render(
       <QrLabel
         {...({
@@ -35,7 +35,7 @@ describe("QrLabel", () => {
       />
     );
 
-    expect(screen.queryByText(/Powered by/i)).not.toBeInTheDocument();
+    expect(screen.queryByText("brAIn lab")).not.toBeInTheDocument();
   });
 });
 
@@ -48,13 +48,13 @@ describe("BarcodeLabel", () => {
     },
   } as const;
 
-  it("shows Shelf branding by default", () => {
+  it("shows brAIn lab branding by default", () => {
     render(<BarcodeLabel {...(baseProps as any)} />);
 
-    expect(screen.getByText(/Powered by/i)).toBeInTheDocument();
+    expect(screen.getByText("brAIn lab")).toBeInTheDocument();
   });
 
-  it("hides Shelf branding when requested", () => {
+  it("hides brAIn lab branding when requested", () => {
     render(
       <BarcodeLabel
         {...({
@@ -64,6 +64,6 @@ describe("BarcodeLabel", () => {
       />
     );
 
-    expect(screen.queryByText(/Powered by/i)).not.toBeInTheDocument();
+    expect(screen.queryByText("brAIn lab")).not.toBeInTheDocument();
   });
 });

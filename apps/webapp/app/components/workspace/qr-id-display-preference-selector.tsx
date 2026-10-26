@@ -43,7 +43,7 @@ const BASE_OPTIONS: Option[] = [
   {
     value: "QR_ID",
     label: "QR Code ID",
-    description: "Shelf-generated — every asset has one (e.g., abc123xyz)",
+    description: "brAIn lab-generated — every asset has one (e.g., abc123xyz)",
     exampleValue: "abc123xyz",
   },
   {

@@ -145,7 +145,7 @@ export function UserDetailsForm({
           <Input
             label="Username"
             hideLabel={true}
-            addOn="shelf.nu/"
+            addOn="@"
             type="text"
             name={zo.fields.username()}
             defaultValue={user?.username || undefined}

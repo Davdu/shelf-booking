@@ -298,7 +298,7 @@ describe("convertAccountToSso", () => {
     expect(error).toMatchObject({
       status: 409,
       message:
-        "Another Shelf account uses this email address with different letter case. Resolve the duplicate before converting.",
+        "Another brAIn lab account uses this email address with different letter case. Resolve the duplicate before converting.",
       shouldBeCaptured: false,
     });
     // The email is personal data and stays out of the error.

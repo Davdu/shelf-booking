@@ -77,7 +77,7 @@ export function AuditUpdatesEmailTemplate({
   return (
     <Html>
       <Head>
-        <title>Audit update from Shelf.nu</title>
+        <title>Audit update from brAIn lab</title>
       </Head>
 
       <Container
@@ -209,7 +209,7 @@ export function AuditUpdatesEmailTemplate({
             >
               Thanks,
               <br />
-              The Shelf Team
+              The brAIn lab team
             </p>
           )}
           <p
@@ -220,7 +220,7 @@ export function AuditUpdatesEmailTemplate({
               color: "#344054",
             }}
           >
-            © {new Date().getFullYear()} Shelf.nu
+            © {new Date().getFullYear()} brAIn lab
           </p>
         </div>
       </Container>

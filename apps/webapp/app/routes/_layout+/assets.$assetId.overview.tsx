@@ -1046,7 +1046,7 @@ export default function AssetOverview() {
               {asset?.qrCodes?.[0] ? (
                 <li className="w-full border-b-[1.1px] border-b-gray-100 p-4 last:border-b-0 md:flex">
                   <span className="w-1/4 text-[14px] font-medium text-gray-900">
-                    Shelf QR ID
+                    brAIn lab QR ID
                   </span>
                   <div className="mt-1 w-3/5 text-gray-600 md:mt-0">
                     {asset.qrCodes[0].id}
@@ -1182,7 +1182,7 @@ export default function AssetOverview() {
                         variant="link"
                         aria-label="Manage placements"
                         title="Manage placements"
-                        className="hidden shrink-0 rounded p-1 text-gray-500 transition-opacity hover:bg-gray-100 hover:text-gray-700 md:inline-flex md:opacity-0 md:group-hover/field:opacity-100 md:focus-visible:opacity-100"
+                        className="md:group-hover/field:opacity-100 hidden shrink-0 rounded p-1 text-gray-500 transition-opacity hover:bg-gray-100 hover:text-gray-700 md:inline-flex md:opacity-0 md:focus-visible:opacity-100"
                       >
                         <Icon icon="pen" />
                       </Button>

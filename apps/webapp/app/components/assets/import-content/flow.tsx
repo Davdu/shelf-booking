@@ -376,8 +376,8 @@ export function ContentImportFlow({
           <h4 id="mapping-review-title">Check how your columns map</h4>
           <p className="text-[14px] text-gray-600">
             {selectedFile ? <b>{selectedFile.name}</b> : "Your file"}: each
-            column goes to the Shelf field on its right. Change any that look
-            wrong, or set them to Skip.
+            column goes to the brAIn lab field on its right. Change any that
+            look wrong, or set them to Skip.
           </p>
 
           <MappingReview
@@ -406,7 +406,7 @@ export function ContentImportFlow({
 
           {duplicateRows.size > 0 ? (
             <p role="alert" className="mt-2 text-[14px] text-error-600">
-              Two or more columns go to the same Shelf field. Fix the rows
+              Two or more columns go to the same brAIn lab field. Fix the rows
               marked above to continue.
             </p>
           ) : null}

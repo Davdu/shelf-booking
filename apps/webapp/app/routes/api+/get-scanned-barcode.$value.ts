@@ -75,7 +75,7 @@ export async function loader({ request, params, context }: LoaderFunctionArgs) {
       throw new ShelfError({
         cause: null,
         message:
-          "Your workspace does not support scanning barcodes. Contact your workspace owner to activate this feature or try scanning a Shelf QR code.",
+          "Your workspace does not support scanning barcodes. Contact your workspace owner to activate this feature or try scanning a brAIn lab QR code.",
         additionalData: { shouldSendNotification: false },
         label: "Barcode",
         shouldBeCaptured: false,

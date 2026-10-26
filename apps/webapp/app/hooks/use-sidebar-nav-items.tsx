@@ -10,10 +10,8 @@ import {
   FileBarChartIcon,
   HomeIcon,
   MapPinIcon,
-  MessageCircleIcon,
   Package,
   PackageOpenIcon,
-  QrCodeIcon,
   ScanBarcodeIcon,
   SettingsIcon,
   TagsIcon,
@@ -287,14 +285,11 @@ export function useSidebarNavItems() {
     },
   ];
 
+  /**
+   * brAIn lab: the "Asset labels" (store.shelf.nu) and "Questions/Feedback"
+   * items were removed from the bottom menu.
+   */
   const bottomMenuItems: NavItem[] = [
-    {
-      type: "child",
-      title: "Asset labels",
-      to: `https://store.shelf.nu/?ref=shelf_webapp_sidebar`,
-      Icon: QrCodeIcon,
-      target: "_blank",
-    },
     {
       type: "child",
       title: "QR Scanner",
@@ -311,14 +306,6 @@ export function useSidebarNavItems() {
       },
       onClick: () => {
         // This will be handled by the sidebar component with popover
-      },
-    },
-    {
-      type: "button",
-      title: "Questions/Feedback",
-      Icon: MessageCircleIcon,
-      onClick: () => {
-        // Handled by FeedbackNavItem in sidebar-nav.tsx
       },
     },
   ];

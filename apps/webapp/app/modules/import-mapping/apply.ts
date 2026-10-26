@@ -74,8 +74,8 @@ export function applyMapping(
     );
     throw new ShelfError({
       cause: null,
-      title: "Two columns share one Shelf field",
-      message: `Each Shelf field can take one column only. Change the mapping for ${clashes.join(
+      title: "Two columns share one brAIn lab field",
+      message: `Each brAIn lab field can take one column only. Change the mapping for ${clashes.join(
         "; "
       )}.`,
       additionalData: {
@@ -98,7 +98,7 @@ export function applyMapping(
       cause: null,
       title: "Nothing to import",
       message:
-        "Every column is set to Skip. Map at least one column to a Shelf field.",
+        "Every column is set to Skip. Map at least one column to a brAIn lab field.",
       additionalData: { failureReason: "invalid_mapping" },
       label: "Assets",
       status: 400,

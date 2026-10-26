@@ -72,8 +72,8 @@ export const IMPORT_FIELDS = [
   },
   {
     name: "qrId",
-    label: "Shelf QR ID",
-    hint: "An existing, unlinked Shelf QR code",
+    label: "brAIn lab QR ID",
+    hint: "An existing, unlinked brAIn lab QR code",
   },
   {
     name: "type",

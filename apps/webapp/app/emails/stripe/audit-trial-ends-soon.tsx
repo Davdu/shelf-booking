@@ -96,7 +96,7 @@ If you'd like to keep using Audits, no action is needed - everything will transi
 
 If you have any questions, feel free to reach out to us at ${SUPPORT_EMAIL}. We're happy to help!
 
-The Shelf Team
+The brAIn lab team
 `;
   }
 
@@ -110,7 +110,7 @@ Don't worry - your audit data won't be deleted. Once you subscribe, everything w
 
 If you have any questions, feel free to reach out to us at ${SUPPORT_EMAIL}. We're happy to help!
 
-The Shelf Team
+The brAIn lab team
 `;
 };
 
@@ -232,7 +232,9 @@ function AuditTrialEndsSoonEmailTemplate({
             {SUPPORT_EMAIL}. We're happy to help!
           </Text>
 
-          <Text style={{ marginTop: "24px", ...styles.p }}>The Shelf Team</Text>
+          <Text style={{ marginTop: "24px", ...styles.p }}>
+            The brAIn lab team
+          </Text>
         </div>
       </Container>
     </Html>

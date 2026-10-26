@@ -423,7 +423,7 @@ export default function SubscriptionPage() {
                 <span className="font-semibold">CUSTOM</span> plan
               </>
             )}{" "}
-            of Shelf.
+            of brAIn lab.
             <br />
             {isEnterprise && <>That means you have a custom plan. </>}
             To get more information about your plan, please{" "}
@@ -519,7 +519,7 @@ export default function SubscriptionPage() {
                 </p>
                 <p className="text-[13px] text-gray-500">
                   Upgrade to a workspace plan to unlock the full potential of
-                  Shelf alongside your add-ons.
+                  brAIn lab alongside your add-ons.
                 </p>
               </div>
             </div>

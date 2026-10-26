@@ -31,7 +31,7 @@ export const sendSubscriptionGrantedEmail = async ({
   email,
 }: SendSubscriptionGrantedEmailProps) => {
   try {
-    const subject = "Your Shelf subscription is now active";
+    const subject = "Your brAIn lab subscription is now active";
     const html = await subscriptionGrantedHtml({
       customerName,
       subscriptionName,
@@ -69,7 +69,7 @@ Great news! Your ${subscriptionName} subscription is now active.
 
 You now have access to all the features included in your plan:
 
-- Unlimited custom fields to tailor Shelf to your needs
+- Unlimited custom fields to tailor brAIn lab to your needs
 - Team workspaces for seamless collaboration
 - Advanced asset management features
 - Priority support
@@ -81,7 +81,7 @@ ${SERVER_URL}/account-details/subscription
 
 If you have any questions, feel free to reach out to us at ${SUPPORT_EMAIL}. We're happy to help!
 
-The Shelf Team
+The brAIn lab team
 `;
 };
 
@@ -94,7 +94,7 @@ function SubscriptionGrantedEmailTemplate({
   return (
     <Html>
       <Head>
-        <title>Your Shelf subscription is now active</title>
+        <title>Your brAIn lab subscription is now active</title>
       </Head>
 
       <Container style={{ padding: "32px 16px", maxWidth: "100%" }}>
@@ -117,7 +117,7 @@ function SubscriptionGrantedEmailTemplate({
 
           <ul style={{ ...styles.li, paddingLeft: "20px" }}>
             <li style={{ marginBottom: "8px" }}>
-              Unlimited custom fields to tailor Shelf to your needs
+              Unlimited custom fields to tailor brAIn lab to your needs
             </li>
             <li style={{ marginBottom: "8px" }}>
               Team workspaces for seamless collaboration
@@ -156,7 +156,9 @@ function SubscriptionGrantedEmailTemplate({
             {SUPPORT_EMAIL}. We're happy to help!
           </Text>
 
-          <Text style={{ marginTop: "24px", ...styles.p }}>The Shelf Team</Text>
+          <Text style={{ marginTop: "24px", ...styles.p }}>
+            The brAIn lab team
+          </Text>
         </div>
       </Container>
     </Html>

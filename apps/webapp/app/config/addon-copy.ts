@@ -10,7 +10,7 @@
  * included before what the add-on adds.
  */
 const BARCODE_ADDON_DESCRIPTION =
-  "Use barcodes other than Shelf QR codes: Code128, Code39, EAN-13, DataMatrix, or QR codes from another system already on your gear. Shelf QR codes are included in every plan.";
+  "Use barcodes other than brAIn lab QR codes: Code128, Code39, EAN-13, DataMatrix, or QR codes from another system already on your gear. brAIn lab QR codes are included in every plan.";
 
 export const BARCODE_ADDON = {
   label: "Alternative Barcodes",
@@ -20,7 +20,7 @@ export const BARCODE_ADDON = {
 
   /** Shorter subtitle for modal headers */
   subtitle:
-    "Shelf QR codes, printing their labels and scanning them are included in every plan. This add-on is for other barcode formats, or barcodes already on your gear.",
+    "brAIn lab QR codes, printing their labels and scanning them are included in every plan. This add-on is for other barcode formats, or barcodes already on your gear.",
 
   /** Non-owner banner - tells the user to contact the owner */
   nonOwnerDescription: `${BARCODE_ADDON_DESCRIPTION} Contact your workspace owner to enable this add-on.`,

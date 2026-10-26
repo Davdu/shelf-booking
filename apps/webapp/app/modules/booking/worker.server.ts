@@ -62,7 +62,7 @@ const checkoutReminder = async ({ data }: PgBoss.Job<SchedulerData>) => {
         resolveUserDisplayName(booking.custodianUser) ||
         (booking.custodianTeamMember?.name as string);
 
-      const subject = `🔔 Checkout reminder (${booking.name}) - shelf.nu`;
+      const subject = `🔔 Checkout reminder (${booking.name}) - brAIn lab`;
 
       for (const recipient of recipients) {
         // Pure resolve from the loaded recipient row; hints as null-field
@@ -203,7 +203,7 @@ const overdueHandler = async ({ data }: PgBoss.Job<SchedulerData>) => {
       resolveUserDisplayName(booking.custodianUser) ||
       (booking.custodianTeamMember?.name as string);
 
-    const subject = `⚠️ Overdue booking (${booking.name}) - shelf.nu`;
+    const subject = `⚠️ Overdue booking (${booking.name}) - brAIn lab`;
 
     for (const recipient of recipients) {
       // Pure resolve from the loaded recipient row; hints as null-field

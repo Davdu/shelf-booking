@@ -138,9 +138,9 @@ export const assetImportFinishedEmailText = (
     footerReason(workspaceName),
     "",
     "Thanks,",
-    "The Shelf Team",
+    "The brAIn lab team",
     "",
-    `© ${new Date().getFullYear()} Shelf.nu`,
+    `© ${new Date().getFullYear()} brAIn lab`,
     ""
   );
   return lines.join("\n");
@@ -281,7 +281,7 @@ function AssetImportFinishedEmailTemplate(
           >
             Thanks,
             <br />
-            The Shelf Team
+            The brAIn lab team
           </p>
           <p
             style={{
@@ -291,7 +291,7 @@ function AssetImportFinishedEmailTemplate(
               color: "#344054",
             }}
           >
-            © {new Date().getFullYear()} Shelf.nu
+            © {new Date().getFullYear()} brAIn lab
           </p>
         </div>
       </Container>

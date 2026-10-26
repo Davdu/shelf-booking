@@ -119,7 +119,7 @@ export function BookingUpdatesEmailTemplate({
   return (
     <Html>
       <Head>
-        <title>Bookings update from Shelf.nu</title>
+        <title>Bookings update from brAIn lab</title>
       </Head>
 
       <Container
@@ -241,7 +241,7 @@ export function BookingUpdatesEmailTemplate({
                 and {assets.length - BOOKING_EMAIL_ASSETS_DISPLAY_LIMIT} more —{" "}
                 <a
                   href={`${SERVER_URL}/bookings/${booking.id}?orgId=${booking.organizationId}`}
-                  style={{ color: "#EF6820" }}
+                  style={{ color: "#BC0020" }}
                 >
                   View full booking
                 </a>

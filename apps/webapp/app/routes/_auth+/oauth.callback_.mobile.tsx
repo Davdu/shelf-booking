@@ -137,7 +137,7 @@ export async function action({ request }: ActionFunctionArgs) {
             status: 409,
             title: "Account needs attention",
             message:
-              "Your Shelf account is not linked to this single sign-on login yet. Please contact support.",
+              "Your brAIn lab account is not linked to this single sign-on login yet. Please contact support.",
             additionalData: {
               authUserId: authSession.userId,
               userId: user.id,

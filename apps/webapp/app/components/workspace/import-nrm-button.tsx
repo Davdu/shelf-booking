@@ -16,7 +16,7 @@ export const ImportNrmButton = ({
         ? {
             reason: (
               <>
-                Importing is not available on the free tier of shelf.{" "}
+                Importing is not available on the free tier of brAIn lab.{" "}
                 <UpgradeMessage />
               </>
             ),

@@ -665,12 +665,12 @@ export async function handleSubscriptionCreated(
       customerId,
       user,
     });
-    const subscriptionName = product?.name || "Shelf Subscription";
+    const subscriptionName = product?.name || "brAIn lab Subscription";
 
     for (const email of emailsToNotify) {
       sendEmail({
         to: email,
-        subject: "Your Shelf subscription is now active",
+        subject: "Your brAIn lab subscription is now active",
         text: subscriptionGrantedText({ customerName, subscriptionName }),
       });
     }
@@ -1041,7 +1041,7 @@ export async function handleInvoicePaymentFailed(
   for (const email of emailsToNotify) {
     sendEmail({
       to: email,
-      subject: "Action needed: Payment issue with your Shelf subscription",
+      subject: "Action needed: Payment issue with your brAIn lab subscription",
       text: unpaidInvoiceUserText({
         customerEmail: email,
         customerName,
@@ -1256,7 +1256,7 @@ export async function handleInvoiceOverdue(
   for (const email of emailsToNotify) {
     sendEmail({
       to: email,
-      subject: "Action needed: Your Shelf invoice is overdue",
+      subject: "Action needed: Your brAIn lab invoice is overdue",
       text: unpaidInvoiceUserText({
         customerEmail: email,
         customerName,
@@ -1410,7 +1410,7 @@ export async function handleTrialWillEnd(
       firstName: resolveUserGreetingName(user),
       email: user.email,
       hasPaymentMethod,
-      planName: product?.name || "Shelf",
+      planName: product?.name || "brAIn lab",
       trialEndDate: new Date((subscription.trial_end as number) * 1000),
       prefs,
     });

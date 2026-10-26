@@ -113,7 +113,7 @@ export async function requireMobileAuth(request: Request) {
   if (!user) {
     throw new ShelfError({
       cause: null,
-      message: "This session does not belong to a Shelf account",
+      message: "This session does not belong to a brAIn lab account",
       label: "Auth",
       status: 401,
       shouldBeCaptured: false,

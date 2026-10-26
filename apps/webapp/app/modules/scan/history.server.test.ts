@@ -125,7 +125,7 @@ describe("toScanHistoryRow", () => {
 
   it("describes the device, and never sends the raw user agent", () => {
     const companion = toScanHistoryRow(createScanWithRelations());
-    expect(companion.device).toBe("Apple iPhone · Shelf app 1.3.0");
+    expect(companion.device).toBe("Apple iPhone · Mobile app 1.3.0");
     expect(JSON.stringify(companion)).not.toContain("ShelfCompanion/");
 
     const unknown = toScanHistoryRow(

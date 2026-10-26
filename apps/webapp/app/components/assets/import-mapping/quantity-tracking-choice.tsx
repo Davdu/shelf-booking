@@ -56,7 +56,7 @@ export function QuantityTrackingChoice({
       </legend>
       <p className="mb-3 text-[14px] text-gray-600">
         Your file has a quantity column but no type column. Pick how its rows
-        come into Shelf.
+        come into brAIn lab.
       </p>
       <div className="flex flex-col gap-2">
         {OPTIONS.map((option) => {

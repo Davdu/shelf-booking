@@ -261,8 +261,8 @@ const WorkspaceGeneralEditForms = ({
           subHeading={
             canHideShelfBranding ? (
               <p>
-                Control whether the "Powered by Shelf.nu" footer appears on QR
-                and barcode labels.
+                Control whether the "brAIn lab" footer appears on QR and barcode
+                labels.
               </p>
             ) : (
               <p>
@@ -274,7 +274,7 @@ const WorkspaceGeneralEditForms = ({
                 >
                   Upgrade your plan
                 </Button>{" "}
-                to hide Shelf branding on labels.
+                to hide brAIn lab branding on labels.
               </p>
             )
           }
@@ -302,13 +302,13 @@ const WorkspaceGeneralEditForms = ({
                   canHideShelfBranding ? "text-gray-700" : "text-gray-400"
                 )}
               >
-                Display Shelf branding on labels
+                Display brAIn lab branding on labels
               </label>
               <p
                 id="showShelfBranding-desc"
                 className="text-[14px] text-gray-600"
               >
-                Toggle Shelf branding on downloadable QR and barcode labels.
+                Toggle brAIn lab branding on downloadable QR and barcode labels.
               </p>
             </div>
           </div>
@@ -621,8 +621,8 @@ const WorkspaceSSOEditForm = ({ className }: Props) => {
             Spell out the convention so owners don't paste the wrong value. */}
         <div className="rounded border border-gray-200 bg-gray-50 p-3 text-[14px] text-gray-600">
           <p>
-            Map your identity provider's groups to Shelf roles below. You only
-            need to map the roles you use — <b>at least one</b> mapping is
+            Map your identity provider's groups to brAIn lab roles below. You
+            only need to map the roles you use — <b>at least one</b> mapping is
             required, the rest can be left blank.
           </p>
           <p className="mt-2">
@@ -640,7 +640,7 @@ const WorkspaceSSOEditForm = ({ className }: Props) => {
           </p>
           <p className="mt-2">
             Each field accepts <b>one or more group IDs, separated by commas</b>{" "}
-            (e.g. <b>it-admins, shelf-admins</b>) — useful when more than one
+            (e.g. <b>it-admins, brainlab-admins</b>) — useful when more than one
             IdP group should map to the same role.
           </p>
         </div>

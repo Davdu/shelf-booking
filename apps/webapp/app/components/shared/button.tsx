@@ -126,10 +126,11 @@ const WHITE_LOADER = "[&_.diamond-loader]:text-white";
  * Style mappings for button variants
  */
 const variants: Record<ButtonVariant, string> = {
+  /** brAIn lab: primary buttons are neutral black; the brand red is kept for accents */
   primary: tw(
-    `border-primary-400 bg-primary-500 text-white focus:ring-2`,
-    "disabled:border-primary-300 disabled:bg-primary-300",
-    "enabled:hover:bg-primary-400",
+    `border-gray-900 bg-gray-900 text-white focus:ring-2`,
+    "disabled:border-gray-300 disabled:bg-gray-300",
+    "enabled:hover:border-gray-700 enabled:hover:bg-gray-700",
     WHITE_LOADER
   ),
   secondary: tw(

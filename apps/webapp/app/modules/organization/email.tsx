@@ -27,7 +27,7 @@ This means you now have full control over:
 - User management
 ${subscriptionSection}
 Thanks,
-The Shelf Team
+The brAIn lab team
 `;
 }
 
@@ -60,6 +60,6 @@ As a result:
 - You no longer have access to billing or ownership-level settings
 ${subscriptionSection}
 Thanks,
-The Shelf Team
+The brAIn lab team
 `;
 }
