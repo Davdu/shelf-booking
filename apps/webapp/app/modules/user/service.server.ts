@@ -1461,6 +1461,8 @@ export const getPaginatedAndFilterableUsers = async ({
   const searchParams = getCurrentSearchParams(request);
   const { page, search } = getParamsValues(searchParams);
   const tierId = searchParams.get("tierId");
+  /** brAIn lab: deleted (anonymised) accounts are hidden unless asked for */
+  const showDeleted = searchParams.get("showDeleted") === "true";
 
   try {
     const { users, totalUsers } = await getUsers({
@@ -1468,6 +1470,7 @@ export const getPaginatedAndFilterableUsers = async ({
       perPage: 25,
       search,
       tierId,
+      showDeleted,
     });
     const totalPages = Math.ceil(totalUsers / 25);
 
@@ -1476,6 +1479,7 @@ export const getPaginatedAndFilterableUsers = async ({
       perPage: 25,
       search,
       tierId,
+      showDeleted,
       totalUsers,
       users,
       totalPages,
@@ -1495,6 +1499,7 @@ async function getUsers({
   perPage = 8,
   search,
   tierId,
+  showDeleted = false,
 }: {
   /** Page number. Starts at 1 */
   page: number;
@@ -1504,6 +1509,8 @@ async function getUsers({
 
   search?: string | null;
   tierId?: string | null;
+  /** Include soft-deleted users (deletedAt set). Defaults to false. */
+  showDeleted?: boolean;
 }) {
   try {
     const skip = page > 1 ? (page - 1) * perPage : 0;
@@ -1533,6 +1540,11 @@ async function getUsers({
     /** If tierId filter exists, add it to the where object */
     if (tierId) {
       where.tierId = tierId as TierId;
+    }
+
+    /** brAIn lab: hide soft-deleted users unless explicitly requested */
+    if (!showDeleted) {
+      where.deletedAt = null;
     }
 
     const [users, totalUsers] = await Promise.all([

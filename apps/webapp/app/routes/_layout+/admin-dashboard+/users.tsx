@@ -3,6 +3,7 @@ import type { LoaderFunctionArgs, MetaFunction } from "react-router";
 import { data, useNavigate, useLoaderData } from "react-router";
 import { StatusFilter } from "~/components/booking/status-filter";
 import { ErrorContent } from "~/components/errors";
+import { Switch } from "~/components/forms/switch";
 import type { HeaderData } from "~/components/layout/header/types";
 import { List } from "~/components/list";
 import { Filters } from "~/components/list/filters";
@@ -10,6 +11,7 @@ import { Pagination } from "~/components/list/pagination";
 import { DateS } from "~/components/shared/date";
 import { Td, Th } from "~/components/table";
 import { config } from "~/config/shelf.config";
+import { useSearchParams } from "~/hooks/search-params";
 import { useDateFormatter } from "~/hooks/use-date-formatter";
 import type { SubscriptionForAccountStatus } from "~/modules/user/account-status";
 import { getAccountStatus } from "~/modules/user/account-status";
@@ -28,10 +30,18 @@ export async function loader({ context, request }: LoaderFunctionArgs) {
   try {
     await requireAdmin(userId);
 
-    const { search, totalUsers, perPage, page, users, totalPages, tierId } =
-      await getPaginatedAndFilterableUsers({
-        request,
-      });
+    const {
+      search,
+      totalUsers,
+      perPage,
+      page,
+      users,
+      totalPages,
+      tierId,
+      showDeleted,
+    } = await getPaginatedAndFilterableUsers({
+      request,
+    });
 
     const premiumIsEnabled = config.enablePremiumFeatures;
 
@@ -88,6 +98,7 @@ export async function loader({ context, request }: LoaderFunctionArgs) {
       modelName,
       tierId,
       tierItems,
+      showDeleted,
     });
   } catch (cause) {
     const reason = makeShelfError(cause, { userId });
@@ -109,7 +120,10 @@ export default function Area51() {
         <Filters
           slots={{
             "left-of-search": (
-              <StatusFilter statusItems={tierItems} name="tierId" />
+              <div className="flex items-center gap-4">
+                <StatusFilter statusItems={tierItems} name="tierId" />
+                <ShowDeletedUsersToggle />
+              </div>
             ),
           }}
         >
@@ -128,6 +142,39 @@ export default function Area51() {
           }
         />
       </div>
+    </div>
+  );
+}
+
+/**
+ * brAIn lab: toggles `?showDeleted=true`. Deleted accounts are anonymised
+ * ("Deleted User", deleted+…@deleted.shelf.nu) and hidden by default.
+ */
+function ShowDeletedUsersToggle() {
+  const { showDeleted } = useLoaderData<typeof loader>();
+  const [, setSearchParams] = useSearchParams();
+
+  return (
+    <div className="flex items-center gap-2 whitespace-nowrap text-sm text-gray-700">
+      <Switch
+        id="show-deleted-users"
+        checked={showDeleted}
+        onCheckedChange={(checked) =>
+          setSearchParams((prev) => {
+            if (checked) {
+              prev.set("showDeleted", "true");
+            } else {
+              prev.delete("showDeleted");
+            }
+            /** Reset pagination so the page offset fits the new list */
+            prev.delete("page");
+            return prev;
+          })
+        }
+      />
+      <label htmlFor="show-deleted-users" className="cursor-pointer">
+        Show deleted users
+      </label>
     </div>
   );
 }
