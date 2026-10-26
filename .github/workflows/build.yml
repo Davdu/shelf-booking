@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - dev
+      # brAIn lab: every push to the branding branch publishes an image
+      - brainlab
     # Release tags are `shelf@X.Y.Z`. Without this the workflow never runs for a
     # release, so the version-pinned image the release notes tell self-hosted
     # operators to pull is never built.
@@ -23,7 +25,7 @@ env:
 jobs:
   build:
     name: 🐳 Build
-    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.ref_type == 'tag' }}
+    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/brainlab' || github.ref_type == 'tag' }}
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
@@ -71,6 +73,7 @@ jobs:
           # `latest`.
           tags: |
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
+            type=raw,value=brainlab,enable=${{ github.ref == 'refs/heads/brainlab' }}
             type=ref,enable=${{ github.ref_type != 'tag' }},suffix=-{{sha}},event=branch
             type=match,pattern=shelf@(.*),group=1
 

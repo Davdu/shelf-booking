@@ -50,13 +50,15 @@ and `itu-atrium-cover.jpg`.
 
 ## Building the image
 
-Pushing a tag named `shelf@<version>` runs `.github/workflows/build.yml`, which
-publishes `ghcr.io/davdu/shelf-booking:<version>` for amd64 and arm64:
+Every push to the `brainlab` branch runs `.github/workflows/build.yml` and
+publishes (amd64 + arm64):
 
-```bash
-git tag shelf@2.4.0-brainlab.1
-git push origin shelf@2.4.0-brainlab.1
-```
+- `ghcr.io/davdu/shelf-booking:brainlab-<short sha>`: pinned, use this in Dokploy
+- `ghcr.io/davdu/shelf-booking:brainlab`: always the newest build
+
+A tag named `shelf@<version>` (e.g. `shelf@2.4.0-brainlab.1`) also builds
+`ghcr.io/davdu/shelf-booking:<version>`. Never `git push --tags`: every
+upstream `shelf@*` tag would start its own build.
 
 ## Upgrading to a new Shelf release
 
