@@ -7,12 +7,24 @@ import { db } from "~/database/db.server";
 import type { ErrorLabel } from "~/utils/error";
 import { isLikeShelfError, ShelfError } from "~/utils/error";
 import { gifToPng } from "~/utils/gif-to-png";
+import { addLogoToQrPng, QR_LOGO_ERROR_CORRECTION } from "./qr-logo.server";
 import { getQrUrl } from "./qr-url.server";
 // eslint-disable-next-line import/no-cycle
 import { createQr, getQrByAssetId, getQrByKitId } from "./service.server";
 
 const label: ErrorLabel = "QR";
 
+/**
+ * Renders a QR code as a PNG data URL.
+ *
+ * Every size except `cable` carries the brAIn lab logo in the center and is
+ * therefore encoded at error correction H with an automatic version, whatever
+ * the stored `version` and `errorCorrection` say. The encoded URL is the same,
+ * so labels printed at the stored level keep scanning to the same code. Cable
+ * labels are too small for a legible logo and keep the stored settings.
+ *
+ * @see {@link file://./qr-logo.server.ts}
+ */
 export async function generateCode({
   version,
   errorCorrection,
@@ -25,18 +37,34 @@ export async function generateCode({
   size: "cable" | "small" | "medium" | "large";
 }) {
   try {
-    const code = QRCode(version, errorCorrection);
+    const withLogo = size !== "cable";
+    const code = withLogo
+      ? QRCode(0, QR_LOGO_ERROR_CORRECTION)
+      : QRCode(version, errorCorrection);
     code.addData(getQrUrl(qr.id));
     code.make();
 
-    /** We use a margin of 0 because we handle this using canvas in the client */
-    const sizes = {
+    /**
+     * [module size in px, margin]. The margin is 0 because the label adds the
+     * quiet zone around the image. Pixel sizes below are for a 29-module code;
+     * codes with the logo are denser (typically 41 to 45 modules) and so larger.
+     */
+    const sizes: Record<typeof size, [number, number]> = {
       cable: [1, 0], // 29px => 0.8cm(0.77)
       small: [2, 0], // 58px => 1.5cm(1.53)
       medium: [4, 0], // 116px => 3.1cm(3.07)
       large: [6, 0], // 174px => 4.7cm(4.6)
     };
-    const src = await gifToPng(code.createDataURL(...sizes[size]));
+    const [cellSize, margin] = sizes[size];
+    const dataUrl = code.createDataURL(cellSize, margin);
+    const src = withLogo
+      ? await addLogoToQrPng({
+          dataUrl,
+          moduleCount: code.getModuleCount(),
+          cellSize,
+          margin,
+        })
+      : await gifToPng(dataUrl);
 
     return {
       sizes,

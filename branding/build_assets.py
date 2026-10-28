@@ -67,6 +67,8 @@ def symbol(size, radius_ratio=0.18, icon_ratio=0.74, full_bleed=False):
     return im.resize((size, size), Image.LANCZOS)
 
 save_png(symbol(256), 'images/shelf-symbol.png')
+# Logo in the center of QR codes, inlined into the server bundle by qr-logo.server.ts
+symbol(256).save(os.path.join(ROOT, 'apps', 'webapp', 'app', 'modules', 'qr', 'qr-logo.png'), optimize=True)
 save_png(symbol(1024), 'images/shelf-symbol-desktop.png')
 save_png(symbol(180, full_bleed=True).convert('RGB'), 'images/apple-touch-icon.png')
 # Favicon: multi-size ICO
